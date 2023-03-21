@@ -1,3 +1,3 @@
 let alamat = "kalinyamatan Jepara";
 
-console.log(alamat)
+console.log(alamat);
