@@ -16,5 +16,5 @@ console.log(z);
 //pembagian
 x = 2;
 y = 4;
-z = x : y;
+z = x / y;
 console.log(z);
