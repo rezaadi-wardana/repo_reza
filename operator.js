@@ -40,3 +40,9 @@ console.log(
     no1 < no2, 
     no1 <= no2)
 
+
+
+//logical operator 
+console.log(no1 < no2 || no1 > b);
+console.log(no1 < no2 && no1 < b);
+console.log(!(no1 < no2) && no1 > b);
