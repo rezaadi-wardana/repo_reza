@@ -1,4 +1,3 @@
-//undefined
 var kosong;
 console.log(kosong);
 console.log(typeof(kosong));
@@ -25,14 +24,13 @@ let tiada = null;
 console.log(tiada);
 
 //Boolean
-const a = 1;
-const b = 2;
+const c = 1;
+const d = 2;
+const c = 1;
+const d = 2;
 
-let hasilnyabenar = a < b;
-let hasilnyasalah = a > b;
-
-console.log("ini nilai boolean", hasilnyabenar);
-console.log("ini nilai boolean", hasilnyasalah);
+console.log("ini nilai boolean",c < d);
+console.log("ini nilai boolean",c > d);
 
 //Symbol
 const id1 = Symbol("id");
