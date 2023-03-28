@@ -1,3 +1,4 @@
+//operator aritmatika
 //penambahan
 x = 2;
 y = 4;

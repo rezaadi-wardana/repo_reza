@@ -8,6 +8,13 @@ var angka = 1;
 console.log(angka);
 console.log(typeof(angka));
 
+//BigInt
+const bignumber = 1234565789123456789n;
+const myint = 12345678901234567889900;
+console.log(bignumber);
+console.log(myint);
+console.log(6n +7n);
+
 //string 
 var word = "ini tipe data string";
 document.write(word);
