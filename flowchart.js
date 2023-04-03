@@ -1,4 +1,4 @@
-//flowchhart  
+//flowchhart menentukan kelulusan
 
 document.write('PROGRAM FLOWCHART MENENTUKAN KELULUSAN');
 

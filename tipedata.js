@@ -27,11 +27,13 @@ console.log(tiada);
 
 //Boolean
 
-const c = 1;
-const d = 2;
+const c1 = 1;
+const d1 = 2;
+const c2 = 1;
+const d2 = 2;
 
-console.log("ini nilai boolean",c < d);
-console.log("ini nilai boolean",c > d);
+console.log("ini nilai boolean",c1 < d1);
+console.log("ini nilai boolean",c2 > d2);
 
 //Symbol
 const id1 = Symbol("id");
