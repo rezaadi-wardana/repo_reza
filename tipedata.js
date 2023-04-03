@@ -1,3 +1,5 @@
+
+
 var kosong;
 console.log(kosong);
 console.log(typeof(kosong));
@@ -24,8 +26,7 @@ let tiada = null;
 console.log(tiada);
 
 //Boolean
-const c = 1;
-const d = 2;
+
 const c = 1;
 const d = 2;
 
