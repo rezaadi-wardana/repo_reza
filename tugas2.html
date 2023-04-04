@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+</head>
+<body>
+    <script>
+        let value = prompt("Masukkan Nilai");
+
+        if (value >= 90 && value <=100){
+            output = "Selamat! Anda Mendapatkan nilai A."
+        } else if (value >= 80 && value <=89){
+            output = "Selamat! Anda Mendapatkan nilai B."
+        } else if (value >= 70 && value <=79){
+            output = "Selamat! Anda Mendapatkan nilai C."
+        } else if (value >= 60 && value <=69){
+            output = "Selamat! Anda Mendapatkan nilai D."
+        } else if (value<=60){
+            output = "Selamat! Anda Mendapatkan nilai E."
+        }else{
+            output = "Masukkan Anda Salah, Silahkan coba kembali :)"
+        }
+        console.log(output);
+        document.write(output);
+    </script>
+
+</body>
+</html>
