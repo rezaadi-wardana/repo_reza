@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOPING</title>
+</head>
+<body>
+    <script>
+        //PROGRAM MENAMPILKAN NAMA SEBANYAK 50 KALI
+        document.write("NAMA-NAMA 50 KALI : <br>")
+        for ( let i=50; i>=1; i--){
+            document.write("Nomor Ke-",i," Reza Wardana<br>")
+        }
+
+
+        //PROGRAM MENAMPILKAN NAMA TEMAN SEKELAS
+        let myArray = ["nizar","teguh","zaenal","rahmat","tegar","rohman","zaka","syihab","bowo","rozin"];
+        
+        document.write("<BR><BR>NAMA-NAMA TEMAN SEKELAS : <br>")
+        for ( const arrayItem of myArray){
+            document.write(arrayItem,"<br>");
+        }
+
+        //PROGRAM WHILE DO WHILE
+        document.write("<br>PROGRAM WHILE DO WHILE<br>")
+        let a = 1;
+        while (a <= 25){
+            document.write(a,"<br>");
+            a++
+        }
+
+
+        let b = 1;
+        do {
+            document.write(b,"<br>");
+            b++
+        } while ( b <=25);
+
+    </script>
+</body>
+</html>
