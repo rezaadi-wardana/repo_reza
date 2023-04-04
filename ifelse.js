@@ -11,7 +11,7 @@ document.write('<br>Nilai yang dimasukkan andalah ' + value);
 if ( value > 75){
     var outputt ='<br>Hasil : Anda Lulus';
 }else{
-    var outputt= '<br>Hasil : Maaf Anda Tidak Lulus';
+    let outputt= '<br>Hasil : Maaf Anda Tidak Lulus';
 }
 
 //Output
