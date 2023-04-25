@@ -19,11 +19,36 @@
 
         //program array 2
         let namaTeman = ["Reza","Teguh","Reza","Rahmat","Rohman"];
-        let hobi = ["Membaca modul","Membaca materi","Membaca buku"]
+        let hobi = ["Membaca modul","Membaca materi","Membaca buku"];
 
+        //penampilan
         for( let isinama of namaTeman){
             document.write(namaTeman);
+            break;
         }
+        for( let isihobi of hobi){
+            document.write(namaTeman);
+            break;
+        }
+
+        //manipulasi
+        namaTeman.pop();
+        document.write(namaTeman);
+
+        namaTeman.push("Wardana");
+        document.write(namaTeman);
+
+        hobi.shift();
+        document.write(hobi);
+        
+        hobi.unshift("Membaca Hati");
+        document.write(hobi);
+        
+        delete hobi[2];
+        document.write(hobi);
+        hobi.splice(1,1);
+        document.write(hobi);
+
     </script>
 </body>
 </html>
