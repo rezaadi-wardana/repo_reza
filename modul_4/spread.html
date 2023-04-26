@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <H1>SPREAD OPERATOR</H1>
+    <script>
+        const array1 = ["melon ", "semangka ", "jeruk ", "anggur ", "strowberry "];
+        document.write(...array1, "<br>");
+
+        const array2 = ["tomat ", "lombok ","wortel "];
+        document.write(...array2,  "<br>");
+
+        const gabungan =  [...array1, ...array2];
+        document.write(...gabungan);
+    </script>
+</body>
+</html>
