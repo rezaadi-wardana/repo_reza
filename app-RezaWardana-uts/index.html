@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS</title>
+    <style src="style.css"></style>
+  
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="beranda">Beranda</div>
+            <div class="dataArray">Data Array</div>
+            <div class="biodata">Biodata</div>
+        </div>
+        <div class="mainbar">
+            <h1>PROGRAM PENILAIAN MAHASISWA</h1>
+
+            <form name="form">
+                <label for="nama">Nama Mahasiswa:</label><br>
+                <input type="text" id="nama" name="fname"><br>
+                <label for="nim">NIM:</label><br>
+                <input type="number" id="nim" name="nim"><br>
+                <label for="matkul">Mata Kuliah:</label><br>
+                <select id="matkul" name="matkul" size="1">
+                    <option value="matkulKe1">Pendidikan Pancasila</option>
+                    <option value="matkulKe2">Pemrograman 2</option>
+                    <option value="matkulKe3">Arsitektur Komputer</option>
+                    <option value="matkulKe4">Bahasa Indonesia</option>
+                    <option value="matkulKe5">Desain Perangkat Lunak</option>
+                    <option value="matkulKe6">Struktur Data dan Algoritma</option>
+                    <option value="matkulKe7">Kalkulus 2</option>
+                    <option value="matkulKe8">Diskrit</option>
+                    <option value="matkulKe9">Sistem Operasi</option>
+                    <option value="matkulKe10">Praktik Pemrograman 2</option>
+
+                </select><br>
+                <label for="nilai ">Nilai Akhir :</label><br>
+                <input type="number" id="nilai" name="nilai">
+              </form>
+
+              <button onclick="tampilkan()">TAMPILKAN</button>
+              <button name="reset"type="reset">RESET</button>
+
+              <div class="hasil">
+                <textarea name="hasil" id="hasil" cols="30" rows="10"></textarea>
+              </div>
+              
+              <div>
+                <input type="submit" value="Daftar" class="tombol">
+            </div>
+
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
