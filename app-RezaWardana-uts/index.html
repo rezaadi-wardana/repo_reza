@@ -5,31 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UTS</title>
-    <style src="style.css"></style>
-  
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
         <div class="navbar">
-            <div class="beranda">Beranda</div>
-            <div class="dataArray">Data Array</div>
-            <div class="biodata">Biodata</div>
+            <div class="beranda"><a href="index.html">Beranda</a></div>
+            <div class="dataArray"><a href ="dataArray.html">Data Array</a></div>
+            <div class="biodata"><a href="biodata.html">Biodata</a></div>
         </div>
         <div class="mainbar">
             <h1>PROGRAM PENILAIAN MAHASISWA</h1>
             
             <form id="daftar" style="margin-bottom:100px;">
-                <input type="number" name="nim" placeholder="NIM">
-                <input type="text" name="name" placeholder="NAMA">
-                <input type="number" name="uts" placeholder="UTS">
-                <input type="number" name="uas" placeholder="UAS">
-                <input type="number" name="tugas" placeholder="TUGAS">
+                <input type="number" name="nim" placeholder="NIM"><br>
+                <input type="text" name="name" placeholder="NAMA"><br>
+                <!-- <input type="number" name="uts" placeholder="UTS"> -->
+                <select id="matkul" name="matkul" size="1">
+                    <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
+                    <option value="Pemrograman 2">Pemrograman 2</option>
+                    <option value="Arsitektur Komputer">Arsitektur Komputer</option>
+                    <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                    <option value="Desain Perangkat Lunak">Desain Perangkat Lunak</option>
+                    <option value="Strukur Data dan Algoritma">Struktur Data dan Algoritma</option>
+                    <option value="Kalkulus 2">Kalkulus 2</option>
+                    <option value="Diskrit">Diskrit</option>
+                    <option value="Sistem Operasi">Sistem Operasi</option>
+                    <option value="Praktik pemrograman 2">Praktik Pemrograman 2</option>
+                </select><br>
+                <input type="number" name="nilaiAkhir" placeholder="Nilai Akhir"><br>
                 <input type="submit">
                 <input type="reset">
             </form>
+           
             
-            <div id="tdaftar">
+            <div id="tdaftar" class="daftar">
 
             </div>
             <!-- <form name="form" id="masukkan">
@@ -49,7 +60,6 @@
                     <option value="matkulKe8">Diskrit</option>
                     <option value="matkulKe9">Sistem Operasi</option>
                     <option value="matkulKe10">Praktik Pemrograman 2</option>
-
                 </select><br>
                 <label for="nilai ">Nilai Akhir :</label><br>
                 <input type="number" id="nilai" name="nilai">
