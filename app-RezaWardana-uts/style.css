@@ -1,4 +1,77 @@
- table, th, td {
-    border: 3px solid black;
+* {
+    margin: 0;
+    padding: 0;
+}
+table, tr, td, th {
+    padding: 3px;
+    text-align: center;
+    font-size: small;
+    background-color: azure;
+    border: 2px solid black;
     border-collapse: collapse;
+}
+h1 {
+    margin-bottom: 10px ;
+    font-size:2rem;
+    color: rgb(130, 0, 194);
+}
+
+/* CONTAINER--------------------------------- */
+.container {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 50% 50%;
+    background-color: rgb(224, 224, 225);
+        
+}
+.container > div {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* NAVBAR------------------------------------- */
+.navbar {
+    background-image : linear-gradient( to top right, rgb(130, 165, 239), rgb(7, 70, 206));
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* MAINBAR------------------------------------- */
+.mainbar {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60% 90%;
+}
+.mainbar  > div{
+margin: auto;
+}
+.mainbar_biodata{
+    display: grid;
+    grid-template-columns:30vw auto;
+    grid-template-rows: 200px auto;
+}
+
+
+/* ARRay-------------------------------------- */
+.mainbar .array {
+    text-align: left;;
+}
+
+
+/* BIODATA -----------------------------------*/
+.foto{
+    border: 100px;
+    background-color: aqua;
+    background-image: url(email4.jpg);
+    background-size: cover;
+    background-position: right;
+    border: black 2px solid;
+    border-radius: 10%;
+}
+.datadiri   {
+    padding: 20px ;
+    text-align: left;
 }
