@@ -8,21 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    
     <div class="container">
-
+        
         <div class="navbar">
             <div class="beranda"><a href="index.html">Beranda</a></div>
             <div class="dataArray"><a href ="dataArray.html">Data Array</a></div>
             <div class="biodata"><a href="biodata.html">Biodata</a></div>
         </div>  
-
+        <div class="sampah"></div>
+        
         <div class="mainbar">
             <h1>PROGRAM PENILAIAN MAHASISWA</h1>
-            <div><form id="daftar" style="margin-bottom:100px;">
-                <input type="number" name="nim" placeholder="NIM"><br>
-                <input type="text" name="name" placeholder="NAMA"><br>
-                <!-- <input type="number" name="uts" placeholder="UTS"> -->
+            <div class="isimain">
+            <div class="form"><form id="daftar">
+                <div class="input">
+                    <input type="text" name="name" placeholder="Nama Mahasiswa"><br>
+                    <input type="number" name="nim" placeholder="NIM"><br>
+                <input type="number" name="nilaiAkhir" placeholder="Nilai Akhir"><br>
                 <select id="matkul" name="matkul" size="1">
                     <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
                     <option value="Pemrograman 2">Pemrograman 2</option>
@@ -35,14 +38,15 @@
                     <option value="Sistem Operasi">Sistem Operasi</option>
                     <option value="Praktik pemrograman 2">Praktik Pemrograman 2</option>
                 </select><br>
-                <input type="number" name="nilaiAkhir" placeholder="Nilai Akhir"><br>
-                <input type="submit">
-                <input type="reset">
+                </div>
+                <div class="tombol">
+                    <input type="submit" >
+                    <input type="reset">
+                </div>
             </form></div>
-            <div id="tdaftar" class="daftar">
+            <div class="png"></div>
         </div>
-
-        
+        <div id="tdaftar" class="daftar"></div>
     </div>
     
 </body>

@@ -11,43 +11,107 @@ table, tr, td, th {
     border-collapse: collapse;
 }
 h1 {
-    margin-bottom: 10px ;
     font-size:2rem;
-    color: rgb(130, 0, 194);
+    color: rgb(49, 37, 79);
+}
+.input > input, select {
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+    width: 100%;
+    background-color: aliceblue;
+    border: 3px solid #19ffe4;
+}
+
+.tombol {
+    margin: 10px auto auto;
+    width: 20%;
+    display: grid;
+    grid-template-columns: 120% 100%;
+    grid-gap: 5px;
+    position: blok;
+}
+.tombol > input {
+
+    font-size: 70%;
+    background-color: rgb(105, 235, 255);
+    padding: 6%;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 /* CONTAINER--------------------------------- */
 .container {
+    height: 10000px;
+    margin: auto;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 50px 50% 50%;
+    grid-template-rows: 50px 50px 50% 50%;
     background-color: rgb(224, 224, 225);
         
 }
 .container > div {
     text-align: center;
-    padding: 10px;
+    padding: 10px ;
     font-size: 20px;
 }
 
 /* NAVBAR------------------------------------- */
 .navbar {
-    background-image : linear-gradient( to top right, rgb(130, 165, 239), rgb(7, 70, 206));
+    background-image : linear-gradient( to top right, rgb(67, 122, 240), rgb(177, 13, 218));
     display: grid;
+    position: fixed;
     grid-template-columns: auto auto auto;
+    width: 100%;
+    height: 30px;
+    box-shadow: 5px 5px 20px rgb(127, 142, 157);
+}
+a {
+    color: rgb(197, 236, 246);
+    text-decoration: none;
 }
 
 /* MAINBAR------------------------------------- */
 .mainbar {
-    padding: 20px;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 60% 90%;
+    grid-template-columns: 100%  ;
+    grid-template-rows: auto;
+    margin: auto 0px;
+    background-image:linear-gradient(to top,rgb(224,224,225),aqua);
+    justify-content: center;
+    justify-items: center;
 }
-.mainbar  > div{
-margin: auto;
+.form {
+    justify-content: center;
+    background-image: linear-gradient(to bottom left, rgb(224,22,225),blue );
+    padding: 5% 5%;
+    margin: 5vw 10vw;
+    border-radius: 3%;;
 }
+
+.isimain {
+    display: grid;
+    grid-template-columns: 100% auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+}
+.png {
+    display: block;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    width: 30vw;
+    height: 30vw;
+    background-image: url(Statistics-amico.png);
+    background-position: center;
+    background-size: cover;
+    animation:normal;
+}
+
 .mainbar_biodata{
     display: grid;
     grid-template-columns:30vw auto;
@@ -75,3 +139,9 @@ margin: auto;
     padding: 20px ;
     text-align: left;
 }
+
+.sampah {
+    padding: 0;
+    margin: 0;
+}
+
