@@ -62,6 +62,7 @@ daftar.onsubmit = async (e) => {
         object['indeks'] = indeks;
         object['keterangan'] = keterangan;
     });
+
     arraySatu.push(object);
 
     let outputHTML = "";
@@ -89,22 +90,12 @@ daftar.onsubmit = async (e) => {
         outputHTML += "<td>"+ val.indeks + "</td>";
         outputHTML += "<td>"+ val.keterangan + "</td>";
         outputHTML += "</tr>";
-
-        
     });
+    
     outputHTML += "</table>"
-
     document.getElementById("tdaftar").innerHTML = outputHTML;
     
     
     
 }
-
-
-
-
-// var btn_nama = document.getElementById("nama");
-// let btn_nim = document.getElementById("nim");
-// let btn_matkul = document.getElementById("matkul");
-// let btn_nilai = document.getElementById("nilai");
 

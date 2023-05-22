@@ -145,3 +145,11 @@ a {
     margin: 0;
 }
 
+.medsos {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    color: #19ffe4;
+}
+.fb .wa .ig  {
+    background-color: #19ffe4;
+}

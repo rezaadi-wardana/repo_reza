@@ -14,3 +14,18 @@ dataMahasiswa.pop(mahasiswa4);//Belum Lahir
 for(const arrayItem of dataMahasiswa){
     document.writeln(arrayItem+"<br>");
 }
+
+dataObject = {};
+dataMahasiswa.forEach(function(baris){
+       baris.forEach((kolom) => {
+
+            document.write("<table>");
+            document.write( "<tr>");
+            document.write( "<td>"+ baris[0] + "</td>");
+            document.write( "<td>"+ baris[1] + "</td>");
+            document.write( "<td>"+ baris[2]+ "</td>");
+            document.write( "</tr>");
+            document.write("</table>");
+            
+    });
+    });
