@@ -1,6 +1,6 @@
 const arraySatu = [];
 
-daftar.onsubmit = async (e) => {
+daftar.onsubmit =  (e) => {
     e.preventDefault();
 
     let data = new FormData(daftar);

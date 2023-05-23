@@ -120,9 +120,12 @@ background-color: rgb(203, 218, 255);    justify-content: center;
 }
 
 .mainbar_biodata{
+    width: 100%;
     display: grid;
-    grid-template-columns:30vw auto;
-    grid-template-rows: 200px auto;
+    grid-template-columns: auto;
+    grid-template-rows: 30vw ;
+    justify-content: center;
+    grid-gap: 1rem;
 }
 
 /* OUTPIUT----------------------------------------------- */
@@ -162,19 +165,25 @@ background-color: rgb(203, 218, 255);    justify-content: center;
 
 /* BIODATA -----------------------------------*/
 .foto{
-    border: 100px;
+    margin: auto;
+    justify-content: center;
+    width: 18rem;
+    height: 18rem;
     background-color: aqua;
-    background-image: url(email4.jpg);
+    background-image: url(reza.jpg);
     background-size: cover;
-    background-position: right;
-    border: black 2px solid;
+    background-position: center;
+    border: rgb(255, 255, 255) 5px solid;
     border-radius: 100%
 }
 .datadiri   {
+    margin: auto ;
     display: grid;
-    grid-template-columns: 30% 60%;
+    grid-template-columns: 40% 80%;
+    grid-row-gap: 5px;
     padding: 20px ;
     text-align: left;
+   
 }
 p {
     font-size: medium;
@@ -186,10 +195,51 @@ p {
 }
 
 .medsos {
+    grid-gap: 5px;
+    margin: auto;
+    border: rebeccapurple 5px solid;
+    border-radius: 70px;
+    padding: 1rem;
+    background-color: #69ebff;
     display: grid;
-    grid-template-columns: auto auto auto;
-    color: #19ffe4;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
 }
-.fb .wa .ig  {
-    background-color: #19ffe4;
+.medsos > div {
+   height: 100px;
+   width:  100px;
 }
+.medsos > div >a> img {
+    height: 100px;
+    width: 100px;
+}
+/* .fb  { */
+   /* background-image: url(fb.png); */
+   /* width: 100px; */
+/* } */
+/* .fb { */
+    /* background-image: url(fbe.png); */
+    /* background-position: center; */
+    /* background-size: cover; */
+/*     */
+/* } */
+/* .wa { */
+    /* background-image: url(wa.png); */
+    /* background-position: center; */
+    /* background-size: cover; */
+/* } */
+/* .ig { */
+    /* background-image: url(ig.png); */
+    /* background-size: cover; */
+    /* background-position: center; */
+/* } */
+/* .github { */
+    /* background-image: url(github.png)    ; */
+    /* background-size: cover; */
+    /* background-position: center; */
+/* } */
+/*  */
+/* a { */
+    /* width: 100%; */
+    /* height: 100%: */
+/* } */
