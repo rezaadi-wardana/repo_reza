@@ -48,7 +48,7 @@ h2 {
 /* CONTAINER--------------------------------- */
 .container {
     overflow:auto;
-    height: 100vw;
+    height: 250vw;
     margin: auto;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: grid;
@@ -167,8 +167,8 @@ background-color: rgb(203, 218, 255);    justify-content: center;
 .foto{
     margin: auto;
     justify-content: center;
-    width: 18rem;
-    height: 18rem;
+    width: 30vw;
+    height: 30vw;
     background-color: aqua;
     background-image: url(reza.jpg);
     background-size: cover;
