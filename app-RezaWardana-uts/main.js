@@ -1,11 +1,12 @@
 const arraySatu = [];
 
-daftar.onsubmit =  (e) => {
+daftar.onsubmit = async (e) => {
     e.preventDefault();
 
     let data = new FormData(daftar);
 
     let object = {}
+    
     data.forEach((val,key) => {
         object[key] = val 
         const nilaiAkhir = (Number(object['nilaiAkhir']));

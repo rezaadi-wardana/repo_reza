@@ -86,7 +86,8 @@ a {
     grid-template-columns: 100vw  ;
     grid-template-rows: auto;
     margin: auto 0px;
-background-color: rgb(203, 218, 255);    justify-content: center;
+background-color: rgb(203, 218, 255);    
+justify-content: center;
     justify-items: center;
 }
 .form {
@@ -159,7 +160,8 @@ background-color: rgb(203, 218, 255);    justify-content: center;
 
 /* ARRay-------------------------------------- */
 .mainbar .array {
-    text-align: left;;
+    text-align: left;
+    padding-left: 10%;
 }
 
 
@@ -209,37 +211,20 @@ p {
    height: 100px;
    width:  100px;
 }
-.medsos > div >a> img {
+.medsos > div > a > img {
     height: 100px;
     width: 100px;
 }
-/* .fb  { */
-   /* background-image: url(fb.png); */
-   /* width: 100px; */
-/* } */
-/* .fb { */
-    /* background-image: url(fbe.png); */
-    /* background-position: center; */
-    /* background-size: cover; */
-/*     */
-/* } */
-/* .wa { */
-    /* background-image: url(wa.png); */
-    /* background-position: center; */
-    /* background-size: cover; */
-/* } */
-/* .ig { */
-    /* background-image: url(ig.png); */
-    /* background-size: cover; */
-    /* background-position: center; */
-/* } */
-/* .github { */
-    /* background-image: url(github.png)    ; */
-    /* background-size: cover; */
-    /* background-position: center; */
-/* } */
-/*  */
-/* a { */
-    /* width: 100%; */
-    /* height: 100%: */
-/* } */
+.buton {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+.button {
+    background-color: #19ffe4;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rebeccapurple;
+    color: rgb(28, 4, 51);
+    font-size: small;
+}

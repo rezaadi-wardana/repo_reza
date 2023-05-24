@@ -1,28 +1,57 @@
-//DATA ARRAY
-let dataMahasiswa = [];
-let mahasiswa1 = ["Muhammad Reza",2004,089516628719];
-let mahasiswa2 = ["Reza Adi",2003,08982194477];
-let mahasiswa3 = ["Adi Wardana",2004,089615645470];
-let mahasiswa4 = ["Reza Wardana",2024,089123456789];
-dataMahasiswa.push(mahasiswa1,mahasiswa2,mahasiswa3,mahasiswa4);
 
-const keterangan = ["Nama Mahasiswa","Tahun Lahir", "Nomor Handphone"];
-dataMahasiswa.unshift(keterangan);
+let jeneng = [];
+let tahun = [];
+let nowa = [];
 
-dataMahasiswa.pop(mahasiswa4);//Belum Lahir
+function tampilke() {
+    var uotput = document.getElementById('otput');
+    var hasil = " ";
 
-for(const arrayItem of dataMahasiswa){
-    console.log(arrayItem+"<br>");
+    for (var i = 0; i < jeneng.length; i++) {
+        hasil += "<br>"
+        hasil += "<p>Nama : " + jeneng[i] +"</p>";
+        hasil += "<p>Tahun Lahir : " + tahun[i] +"</p>";
+        hasil += "<p>NO WA: " + nowa[i] +"</p>";
+        hasil += "<br>"
+        hasil += "<hr>"
+    }
+    uotput.innerHTML = hasil;
 }
 
-dataObject = {};
-document.write("<table>");
-dataMahasiswa.forEach(function(baris,indeks){
-    document.write( "<tr>");
-         document.write( "<td>" + indeks + "</td>");
-         document.write( "<td>" + baris[0] + "</td>");
-         document.write( "<td>"+ baris[1] + "</td>");
-         document.write( "<td>"+ baris[2]+ "</td>");
-    document.write( "</tr>");
-});
-document.write("</table>");
+function tambah() {
+    var nam = prompt("Nama Mahasiswa : ");
+    var tah = prompt("Tahun Lahir : ");
+    var no = prompt("Nomor WA : ")
+
+   jeneng.push(nam);
+   tahun.push(tah);
+   nowa.push(no);
+
+    tampilke();
+}
+function unshift() {
+    var nam = prompt("Nama Mahasiswa : ");
+    var tah = prompt("Tahun Lahir : ");
+    var no = prompt("Nomor WA : ")
+
+   jeneng.unshift(nam);
+   tahun.unshift(tah);
+   nowa.unshift(no);
+
+    tampilke();
+}
+function delet() {
+    var u = parseInt(prompt("Index yang dihapus"));
+
+    if(u >= 0 && u < jeneng.length) {
+         jeneng.splice(u,1);
+         tahun.splice(u,1);
+         nowa.splice(u,1);
+      
+        tampilke();
+    } else {
+        alert("coba lagi");
+    }
+}
+
+
