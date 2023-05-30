@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUGAS MODUL 5</title>
+</head>
+<body>
+    <div class="container">
+        <h1>PENCARIAN KELOMPOK PEMROGRAMAN MAHASISWA RPL B</h1>
+        <div class="form">
+            <form action="" id="form">
+                <label for="nama">Nama :</label>
+                <input type="text" id="nama" placeholder="masukkan nama"/>
+                <label for="number">No Absen :</label>
+                <input type="number" id="angka"placeholder="masukkan nomor absen"/>
+            </form>
+            <button type="submit" onclick="runn()">cari</button>
+            <div class="hasil" id="hasil">
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        function runn() {
+        let namaa = document.getElementById("nama").value;
+        let noabsen = parseInt( document.getElementById("angka").value);
+        let kelompok= "";
+            switch(noabsen){
+                case 1:
+                case 8 :
+                case 13 :
+                case 7 :
+                    kelompok = "5";
+                    break;
+                case 12 :
+                case 2 :
+                case 21:
+                    kelompok = "4";
+                    break;
+                case 19:
+                case 16 :
+                case 10:
+                    kelompok = "3";
+                    break;
+                case 18:
+                case 4 :
+                case 9 :
+                    kelompok = "2";
+                    break;
+                case 11:
+                case 20 :
+                case 17:
+                    kelompok = "1";
+                    break;
+                case 14: 
+                case 5 : 
+                case 3 :
+                case 15:
+                    kelompok = "mandiri";
+                    break;
+                default:
+                    kelompok = "tidak valid"
+                    
+            }
+            
+            document.getElementById("hasil").innerHTML = "Nama :" + namaa + "<br>Kelompok : " + kelompok;
+        
+       
+        let anggota = "";
+        if(kelompok == 5){
+            anggota = "Reza,Teguh,Roykhan,Bowo";
+        }else if(kelompok == 4){
+            anggota = "Rozin,Tegar,Lana";
+        }
+        else if(kelompok == 3){
+            anggota = "Zainal,Winda,Salsa";
+        }
+        else if(kelompok == 2){
+            anggota = "Zaenur,Niken,Sabila";
+        }
+        else if(kelompok == 1){
+            anggota = "Tarissa,Zakaria,Yuli";
+        }
+        else if(kelompok == "mandiri"){
+            anggota = "Nizar,Ulya,Selfi,Nadia";
+        }else{
+            anggota = "tidak valid"
+        }
+        document.getElementById("hasil").innerHTML = "Nama :" + namaa + "<br>Kelompok : " + kelompok + "<br>Anggota :" + anggota;
+
+    }
+    </script>
+</body>
+</html>
