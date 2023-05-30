@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwitchCase</title>
+</head>
+<body>
+    <script>
+        let kopi = parseInt(prompt("SELAMAT DATANG CAFEPEDIA" + 
+                            "\nSebutksn nomor pesanan anda : "+
+                            "\n1.Kopi Kapal Pesiar"+
+                            "\n2.Kopi Star Bug"+
+                            "\n3.Kopi luwak Dark Coffe"));
+        let pesanan = "";
+        switch(kopi){
+            case 1:
+                pesanan = "Anda memesan kopi Kapal Pesiar seharga Rp 49.999";
+                break;
+            case 2:
+                pesanan = "Anda memesan kopi Star Bug seharga Rp 79.999";
+                break;
+            case 3:
+                pesanan = "Anda memesan kopi Luwak Dark Coffe seharga Rp 29.999";
+                break;
+            default:
+                pesanan = "Masukkan anda salah silahkan coba kembali"
+                break;
+        }
+        
+        alert(pesanan+" , Terimakasih...");
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengkondisian</title>
+</head>
+<body>
+    <script>
+
+        // MULTICONDITIONAL STATEMENT
+
+        let umur = 22;
+        let output;
+
+        if(umur >= 0 && umur < 13){
+            output = "Obat diminum 2x sehari 1/2 tablet";
+        }else if (umur >= 13){
+            output = "Obat diminum 3x sehari 1 tablet";
+        }else {
+            output = "Masukkan Salah"
+        }
+
+        document.write("Peraturan minum obat anda adalah : "+ output);
+    </script>
+</body>
+</html>
