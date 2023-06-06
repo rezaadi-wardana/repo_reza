@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="navbar">
+            <div class="title"></div>
+            <div class="beranda"><a href="index.html">Beranda</a></div>
+            <div class="dataArray"><a href ="dataArray.html">Data Array</a></div>
+            <div class="biodata"><a href="biodata.html">Biodata</a></div>
+        </div>  
+
+        <div class="sampah"></div>
+        
+        <div class="mainbar">
+            <h2>PROGRAM PENILAIAN MAHASISWA</h2>
+            <div class="isimain">
+            <div class="form"><form id="daftar">
+                <div class="input">
+                    <input type="text" name="name" placeholder="Nama Mahasiswa"><br>
+                    <input type="number" name="nim" placeholder="NIM"><br>
+                    <input type="number" name="nilaiAkhir" placeholder="Nilai Akhir"><br>
+                    <select id="matkul" name="matkul" size="1">
+                        <option value="Pendidikan Pancasila">Pendidikan Pancasila</option>
+                        <option value="Pemrograman 2">Pemrograman 2</option>
+                        <option value="Arsitektur Komputer">Arsitektur Komputer</option>
+                        <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                        <option value="Desain Perangkat Lunak">Desain Perangkat Lunak</option>
+                        <option value="Strukur Data dan Algoritma">Struktur Data dan Algoritma</option>
+                        <option value="Kalkulus 2">Kalkulus 2</option>
+                        <option value="Diskrit">Diskrit</option>
+                        <option value="Sistem Operasi">Sistem Operasi</option>
+                        <option value="Praktik pemrograman 2">Praktik Pemrograman 2</option>
+                    </select><br>
+                </div>
+                <div class="tombol">
+                    <input type="submit" value="Tampil">
+                    <input type="reset" value="Reset">
+                </div>
+            </form></div>
+            <div class="png"></div>
+        </div>
+        
+        <div class="output">
+            <h3>HASIL PERHITUNGAN</h3><br>
+            <div id="tdaftar" class="daftarr"></div>
+        </div>
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>

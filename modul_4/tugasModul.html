@@ -50,8 +50,9 @@
 
     if (konfirmasi == "y") {
         member = true;
-        discount = 0.1 * totalHarga;
-        const hargaAkhir = totalHarga*jumlahbeli - discount;
+        const hargaAkhir = totalHarga*jumlahbeli;
+        discount = 0.1 * HargaAkhir;
+        const HargaAkhirPol = hargaAkhir - discount;
         alert(`Hai pelanggan setia ${nama} Total harga yang harus kamu bayar adalah Rp ${hargaAkhir}`);
     } else if (konfirmasi == "n") {
         member = false;

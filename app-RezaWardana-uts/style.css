@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+table, tr, td, th {
+    padding: 0.2rem;
+    margin: auto;
+    text-align: center;
+    font-size: small;
+    background-color:aliceblue;
+    border: 2px solid #69ebff;
+    border-collapse: collapse;
+}
+h2 {
+    padding-top: 2rem;
+    font-weight: bold;
+    font-size:2rem;
+    color: rgb(71, 71, 71);
+}
+.input > input, select {
+    text-align: left;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    border-radius: 5px;
+    width: 100%;
+    background-color: aliceblue;
+    border: 3px solid #19ffe4;
+}
+
+.tombol {
+    margin: 10px auto auto;
+    width: 20%;
+    display: grid;
+    grid-template-columns: 120% 100%;
+    grid-gap: 5px;
+    position: blok;
+}
+.tombol > input {
+
+    font-size: 70%;
+    background-color: rgb(105, 235, 255);
+    padding: 6%;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* CONTAINER--------------------------------- */
+.container {
+    overflow:auto;
+    height: 250vw;
+    margin: auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 50px 50% 50%;
+    background-color: rgb(203, 218, 255);    
+}
+.container > div {
+    text-align: center;
+    padding: 10px ;
+    font-size: 20px;
+}
+
+/* NAVBAR------------------------------------- */
+.navbar {
+    background-image : linear-gradient( to top right, rgb(67, 122, 240), rgb(177, 13, 218));
+    display: grid;
+    position: fixed;
+    grid-template-columns: auto 100px 120px 100px;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    box-shadow: 5px 5px 20px rgb(127, 142, 157);
+}
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* MAINBAR------------------------------------- */
+.mainbar {
+    padding-bottom: 200px;
+    display: grid;
+    grid-template-columns: 100vw  ;
+    grid-template-rows: auto;
+    margin: auto 0px;
+background-color: rgb(203, 218, 255);    
+justify-content: center;
+    justify-items: center;
+}
+.form {
+    justify-content: center;
+    background-image: linear-gradient(to bottom left, rgb(224,22,225),blue );
+    padding: 2rem 2rem;
+    margin: 5vw 0vw 5vw 10vw;
+    border-radius: 4%;;
+}
+
+
+.isimain {
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+}
+.png {
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    width: 30vw;
+    height: 30vw;
+    background-image: url(a.gif);
+    background-position: center;
+    background-size: cover;
+    animation:normal;
+}
+
+.mainbar_biodata{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30vw ;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+/* OUTPIUT----------------------------------------------- */
+.output {
+    border-radius: 15px;
+    border: 5px solid rebeccapurple;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 70vw;
+    grid-template-rows: auto;
+    padding: 2rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #19ffe4;
+}
+.output_array {
+    border-radius: 15px;
+    border: 5px solid rebeccapurple;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 50vw;
+    grid-template-rows: auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #19ffe4;
+}
+
+/* ARRay-------------------------------------- */
+.mainbar .array {
+    text-align: left;
+    padding-left: 10%;
+}
+
+
+/* BIODATA -----------------------------------*/
+.foto{
+    margin: auto;
+    justify-content: center;
+    width: 30vw;
+    height: 30vw;
+    background-color: aqua;
+    background-image: url(reza.jpg);
+    background-size: cover;
+    background-position: center;
+    border: rgb(255, 255, 255) 5px solid;
+    border-radius: 100%
+}
+.datadiri   {
+    margin: auto ;
+    display: grid;
+    grid-template-columns: 40% 80%;
+    grid-row-gap: 5px;
+    padding: 20px ;
+    text-align: left;
+   
+}
+p {
+    font-size: medium;
+    color: rgb(52, 4, 48);
+}
+.sampah {
+    padding: 0;
+    margin: 0;
+}
+
+.medsos {
+    grid-gap: 5px;
+    margin: auto;
+    border: rebeccapurple 5px solid;
+    border-radius: 70px;
+    padding: 1rem;
+    background-color: #69ebff;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+}
+.medsos > div {
+   height: 100px;
+   width:  100px;
+}
+.medsos > div > a > img {
+    height: 100px;
+    width: 100px;
+}
+.buton {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+.button {
+    background-color: #19ffe4;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rebeccapurple;
+    color: rgb(28, 4, 51);
+    font-size: small;
+}
