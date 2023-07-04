@@ -8,6 +8,9 @@ const errorMessage = document.getElementById("error-msg");
 const judul = document.getElementById("judul");
 const deskripsi = document.getElementById("deskripsi");
 const tampilkanNama = document.getElementById("tampilkanNama");
+const ucapan = document.getElementById("ucapan");
+const username = document.getElementById("username");
+const labelUsername = document.getElementById("labelUsername");
 let answerValue;
 let operatorQuestion;
 
@@ -84,6 +87,7 @@ startBtn.addEventListener("click", () => {
   errorMessage.classList.add("hide");
   controls.classList.add("hide");
   startBtn.classList.add("hide");
+  ucapan.classList.remove('hide');
   questionGenerator();
 });
 
@@ -95,4 +99,7 @@ const stopGame = (resultText) => {
   startBtn.classList.remove("hide");
   judul.classList.add("hide");
   deskripsi.classList.add("hide");
+  ucapan.classList.add('hide');
+  username.classList.add('hide');
+  labelUsername.classList.add('hide');
 };
