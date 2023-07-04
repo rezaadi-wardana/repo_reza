@@ -183,3 +183,14 @@
     text-decoration: none;
     color: #23234c;
  }
+ .game-box .controls-container h3 {
+  font-size: 3rem;
+ }
+
+ .game-box .controls-container p, .ucapan p , label{
+  font-size: 30px;
+ }
+input {
+  margin: 10px;
+  
+}
