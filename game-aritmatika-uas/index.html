@@ -20,25 +20,34 @@
         <div class="logo-polibang"><img src="assets/img/LogoPolibang.png" alt=""></div>
     </div>
     
-    <div class="ucapan" id="ucapan">
-        <p>👋 Selamat Datang.. <p class="tampilkanNama" id="tampilkanNama" ></p></p>
-    </div>
-
     
+    
+    <div class="ucapan" id="ucapan">
+        <p class="tampilkanNama" id="tampilkanNama" >Nama : </p>
+    </div>
     <div class="game-box">
         <div class="container">
-            <h3>Masukkan Jawaban Di Tempat Yang Kosong !!</h3>
+            <h3>Pilih salah satu kartu dengan jawaban yang benar</h3>
             <div id="question"></div>
-            <button id="submit-btn">Kirim</button>
+            <div id="answer">
+                <button id="btn-ans1"><div id="ans1"></div></button>
+                <button id="btn-ans2"><div id="ans2"></div></button>
+                <button id="btn-ans3"><div id="ans3"></div></button>
+                <button id="btn-ans4"><div id="ans4"></div></button>
+            </div>
+            <!-- <button id="submit-btn">Kirim</button> -->
             <p id="error-msg">Pesan Error</p>
           </div>
           <div class="controls-container">
             <p id="result"></p>
             <h3 id="judul">Game Aritmatika</h3>
             <p id ="deskripsi">Mari Belajar Sambil Bermain</p>
-            <label for="username" id="labelUsername">Masukkan Nama Kamu :</label>
-            <input type="text" id="username"/>
-            <button id="start-btn" onclick="tampil()">Mulai</button>
+            <div class="kotakan">
+                <label for="username" id="labelUsername">Masukkan Nama Kamu :</label>
+                <input type="text" id="username"/>
+                <button id="start-btn" onclick="tampil()">Mulai</button>
+                <button id="lanjutL2">Level 2</button>
+            </div>
           </div>
     </div>
 

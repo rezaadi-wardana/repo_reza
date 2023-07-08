@@ -6,7 +6,7 @@
  }
 
  body {
-    background-color: antiquewhite;
+    background-color:#f7e7b5;
  }
 
  /* ==NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=== */
@@ -37,8 +37,8 @@
  }
 .ucapan{
   padding: auto;
-  position: fixed;
-  width: 100%;
+  width: auto;
+  left: 5rem;
   height: 5rem;
   top: 5rem;
   display: grid;
@@ -49,12 +49,17 @@
   position: absolute;
   z-index: 99999;
 }
+.ucapan p {
+  font-size: 1.2em;
+}
+
+
  /* ==GAME-BOX====GAME-BOX====GAME-BOX====GAME-BOX====GAME-BOX====GAME-BOX====GAME-BOX====GAME-BOX====GAME-BOX====GAME-BOX== */
 
  .container {
-    background-color: #ffffff;
-    width: 90%;
-    max-width: 31.25em;
+    background-color: transparent;
+    width: 80%;
+    /* max-width: 31.25em; */
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -63,13 +68,13 @@
     border-radius: 0.5em;
   }
   .container h3 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #23234c;
     text-align: center;
     font-weight: 500;
     line-height: 1.8em;
   }
-  .container #submit-btn {
+  /* .container #submit-btn {
     font-size: 1.2em;
     font-weight: 500;
     display: block;
@@ -88,7 +93,7 @@
     background-color: #ffdde0;
     color: #d62f2f;
     padding: 0.2em 0;
-  }
+  } */
   .container #question {
     background-color: #eeedf1;
     font-size: 2em;
@@ -118,9 +123,9 @@
     outline: none;
   }
   /*Hide Number Arrows*/
-  .container input[type="number"] {
+  /* .container input[type="number"] {
     -moz-appearance: textfield;
-  }
+  } */
   .container input[type="number"]::-webkit-outer-spin-button,
   .container input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -137,7 +142,12 @@
     width: 100%;
     top: 0;
   }
-  #start-btn {
+  .game-box .controls-container h3 {
+    font-size: 3rem;
+    font-weight: bold;
+   }
+  
+  #start-btn, #lanjutL2 {
     font-size: 1.2em;
     font-weight: 500;
     background-color: #ffffff;
@@ -146,6 +156,7 @@
     outline: none;
     cursor: pointer;
     padding: 0.8em 1.8em;
+    margin: 0px 3em;
     border-radius: 0.3em;
   }
   #result {
@@ -160,7 +171,56 @@
   .hide {
     display: none;
   }
+  .container #answer {
+    display: grid;
+    /* margin: 5px; */
+    height: 200px;
+    grid-template-columns: auto auto auto auto;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
 
+  }
+  .container #answer button {
+  margin: 5px;
+  width: 150px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4c531;
+  font-size: 30px;
+  
+  border-radius: 5%;
+  }
+  .game-box .controls-container p {
+    font-size: 30px;
+    margin-bottom: 30px;
+   }
+   label {
+    font-size: 20px;
+   }
+  input {
+    height: 33px;
+    font-size: larger;
+    border: none;
+    border-radius: 5%;
+    padding: auto;
+    text-align: center;
+  }
+  .kotakan {
+    display: grid;
+    grid-template-columns: auto;
+    background-color:#ffe082;
+    width: 30%;
+    height: 13em;
+    padding: 10px;
+    border-radius: 5%;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 0px;
+    
+  }
  /* ==FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER== */
  .footer {
      top: 92vh;
@@ -183,14 +243,3 @@
     text-decoration: none;
     color: #23234c;
  }
- .game-box .controls-container h3 {
-  font-size: 3rem;
- }
-
- .game-box .controls-container p, .ucapan p , label{
-  font-size: 30px;
- }
-input {
-  margin: 10px;
-  
-}
