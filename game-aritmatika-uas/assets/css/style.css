@@ -171,11 +171,14 @@
   .hide {
     display: none;
   }
+  .container #answer #btn-ans5.hide, .container #answer #btn-ans6.hide {
+    display: none;
+  }
   .container #answer {
     display: grid;
     /* margin: 5px; */
     height: 200px;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
     background-color: transparent;
     justify-content: center;
     align-items: center;

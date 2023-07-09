@@ -1,4 +1,3 @@
-let operators = ["+", "-"];
 const startBtn = document.getElementById("start-btn");
 const lanjutL2 = document.getElementById("lanjutL2");
 const lanjutL3 = document.getElementById("lanjutL3");
@@ -18,6 +17,8 @@ const btnAns1 = document.getElementById("btn-ans1");
 const btnAns2 = document.getElementById("btn-ans2");
 const btnAns3 = document.getElementById("btn-ans3");
 const btnAns4 = document.getElementById("btn-ans4");
+const btnAns5 = document.getElementById("btn-ans5");
+const btnAns6 = document.getElementById("btn-ans6");
 
 let answerValue;
 // let operatorQuestion;
@@ -39,8 +40,13 @@ lanjutL3.classList.add('hide');
 lanjutL4.classList.add('hide');
 
 
+let operators = ["+", "-"];
+
 const questionGenerator = () => {
   
+    btnAns5.classList.add('hide')
+    btnAns6.classList.add('hide')
+    
   //menentukan angka anatara 1-20
   let [num1, num2] = [randomValue(1, 20), randomValue(1, 20)];
   
