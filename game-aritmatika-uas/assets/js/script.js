@@ -1,6 +1,8 @@
 let operators = ["+", "-"];
 const startBtn = document.getElementById("start-btn");
 const lanjutL2 = document.getElementById("lanjutL2");
+const lanjutL3 = document.getElementById("lanjutL3");
+const lanjutL4 = document.getElementById("lanjutL4");
 const question = document.getElementById("question");
 const controls = document.querySelector(".controls-container");
 const result = document.getElementById("result");
@@ -16,21 +18,26 @@ const btnAns1 = document.getElementById("btn-ans1");
 const btnAns2 = document.getElementById("btn-ans2");
 const btnAns3 = document.getElementById("btn-ans3");
 const btnAns4 = document.getElementById("btn-ans4");
+
 let answerValue;
-let operatorQuestion;
+// let operatorQuestion;
 
 //Mendapatkan nilai random
 const randomValue = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-
+let level = 1;
 function tampil(){
   let username = document.getElementById('username').value;
   tampilkanNama.innerHTML = "Nama : ";
   tampilkanNama.innerHTML += username;
+  document.getElementById("tampilkanLevel").innerHTML = "Level : " +  level;
 };
 
 ucapan.classList.add('hide');
 lanjutL2.classList.add('hide');
+lanjutL3.classList.add('hide');
+lanjutL4.classList.add('hide');
+
 
 const questionGenerator = () => {
   
@@ -111,16 +118,23 @@ const questionGenerator = () => {
         let username = document.getElementById('username').value;
         stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
         lanjutL2.classList.remove('hide');
+        document.getElementById("kotakan").style.backgroundColor = "transparent";
+        document.getElementById("kotakan").style.display = "inline-flex";
+        document.getElementById("kotakan").style.width = "auto";
+        // lanjutL2.style.margin = "auto";
+
+
       }
-      // jika jawaban benar
-      else if (operatorQuestion && !operators.includes(userInput)) {
-        errorMessage.classList.remove("hide");
-        errorMessage.innerHTML = "Tolong masukkan angka yang benar!";
-      }
-      //jika jawaban salah
+      // // jika jawaban benar
+      // else if (operatorQuestion && !operators.includes(userInput)) {
+      //   errorMessage.classList.remove("hide");
+      //   errorMessage.innerHTML = "Tolong masukkan angka yang benar!";
+      // }
+      // //jika jawaban salah
       else {
         let username = document.getElementById('username').value;
         stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
+        document.getElementById("kotakan").style.backgroundColor = "transparent";
       }
     }
     //jika jawaban kosong
@@ -136,7 +150,7 @@ const questionGenerator = () => {
 
 //Start Game
 startBtn.addEventListener("click", () => {
-  operatorQuestion = false;
+  // operatorQuestion = false;
   answerValue = "";
   errorMessage.innerHTML = "";
   errorMessage.classList.add("hide");
@@ -145,6 +159,7 @@ startBtn.addEventListener("click", () => {
   ucapan.classList.remove('hide');
   lanjutL2.classList.add('hide');
   questionGenerator();
+  tampil()
 });
 
 //stop game
