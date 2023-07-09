@@ -2,6 +2,7 @@ const startBtn = document.getElementById("start-btn");
 const lanjutL2 = document.getElementById("lanjutL2");
 const lanjutL3 = document.getElementById("lanjutL3");
 const lanjutL4 = document.getElementById("lanjutL4");
+const selesai = document.getElementById("selesai");
 const question = document.getElementById("question");
 const controls = document.querySelector(".controls-container");
 const result = document.getElementById("result");
@@ -38,6 +39,7 @@ ucapan.classList.add('hide');
 lanjutL2.classList.add('hide');
 lanjutL3.classList.add('hide');
 lanjutL4.classList.add('hide');
+selesai.classList.add('hide');
 
 
 let operators = ["+", "-"];
@@ -46,7 +48,7 @@ const questionGenerator = () => {
   
     btnAns5.classList.add('hide')
     btnAns6.classList.add('hide')
-    
+
   //menentukan angka anatara 1-20
   let [num1, num2] = [randomValue(1, 20), randomValue(1, 20)];
   
@@ -171,7 +173,7 @@ startBtn.addEventListener("click", () => {
 //stop game
 const stopGame = (resultText) => {
   result.innerHTML = resultText;
-  startBtn.innerText = "Restart";
+  startBtn.innerText = "Ulangi";
   controls.classList.remove("hide");
   startBtn.classList.remove("hide");
   judul.classList.add("hide");

@@ -158,7 +158,7 @@ lanjutL2.addEventListener("click", () => {
 
     const stopGame = (resultText) => {
         result.innerHTML = resultText;
-        lanjutL2.innerText = "Restart";
+        lanjutL2.innerText = "Ulangi";
         startBtn.classList.add("hide");
         judul.classList.add("hide");
         deskripsi.classList.add("hide");
