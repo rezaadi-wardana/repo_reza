@@ -7,6 +7,9 @@
 
  body {
     background-color:#f7e7b5;
+    background-image: url(../img/bga.jpg) ;
+    background-size: cover;
+
  }
 
  /* ==NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=====NAVBAR=== */
@@ -19,7 +22,7 @@
     grid-template-rows: 5rem;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(248, 230, 131);
+    background-color:transparent;
     z-index: 9999;
  }
  .nav div img {
@@ -38,13 +41,13 @@
 .ucapan{
   padding: auto;
   width: auto;
-  left: 5rem;
+  left: 70%;
   height: 5rem;
   top: 5rem;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  text-align: center;
+  text-align: left;
   align-items: center;
   position: absolute;
   z-index: 99999;
@@ -105,6 +108,7 @@
     justify-content: center;
     margin: 1.4em 0 1em 0;
     padding: 1em 0;
+    border-radius: 5px;
   }
   .container input {
     font-size: 1em;
@@ -132,6 +136,8 @@
     margin: 0;
   }
   .controls-container {
+    background-image: url(../img/bga.jpg);
+    background-size: cover;
     position: absolute;
     display: flex;
     align-items: center;
@@ -150,7 +156,7 @@
   #start-btn, #lanjutL2, #lanjutL3, #lanjutL4, #selesai {
     font-size: 1.2em;
     font-weight: 500;
-    background-color: #ffffff;
+    background-color: #faf5b0;
     color: #23234c;
     border: none;
     outline: none;
@@ -159,10 +165,17 @@
     margin: 0px 3em;
     border-radius: 0.3em;
   }
+  #start-btn:hover, #lanjutL2:hover, #lanjutL3:hover, #lanjutL4:hover, #selesai :hover {
+    background-color: #fffbe7;
+  }
   #result {
     margin-bottom: 1em;
+    padding: 20px;
     font-size: 1.5em;
-    color: #23234c;
+    color: #131333;
+    background-color:#ff9a9a;
+    border-radius: 10px;
+    transition: 3s ease;
   }
   #result span {
     font-weight: 600;
@@ -184,18 +197,33 @@
     align-items: center;
 
   }
-  .container #answer button {
+  
+  .container #answer button  {
   margin: 5px;
   width: 150px;
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4c531;
+  /* background-image: linear-gradient(#f4c531 ,#ffa600); */
+  background-color:#ffae00;
   font-size: 30px;
-  
-  border-radius: 5%;
+  border-radius: 0.2%;
+ 
   }
+  .container #answer #btn-ans1:hover,
+  .container #answer #btn-ans2:hover,
+  .container #answer #btn-ans3:hover,
+  .container #answer #btn-ans4:hover,
+  .container #answer #btn-ans5:hover,
+  .container #answer #btn-ans6:hover
+{
+    transition: 1s ease;
+    background-color: rgb(218, 131, 1);
+    border: 5px solid rgb(0, 0, 0);
+  }
+
+
   .game-box .controls-container p {
     font-size: 30px;
     margin-bottom: 30px;
@@ -209,12 +237,12 @@
     border: none;
     border-radius: 5%;
     padding: auto;
-    text-align: center;
+    padding: 5px;
   }
   .kotakan {
     display: grid;
     grid-template-columns: auto;
-    background-color:#ffe082;
+    background-color:#f4c531;
     width: 30%;
     height: 13em;
     padding: 10px;
@@ -222,6 +250,7 @@
     justify-content: center;
     align-items: center;
     grid-row-gap: 0px;
+  
     
   }
  /* ==FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER====FOOTER== */
@@ -235,14 +264,14 @@
     grid-template-rows: 5rem;
     justify-content: center;
     align-items: center;
-    background-color: rgb(248, 230, 131);
+    background-color: transparent;
  }
  .footer div {
     margin: auto;
  }
  .footer div a {
     padding: 10px 20px;
-    background-color:#f4c531;
+    /* background-color:#f4c531; */
     text-decoration: none;
     color: #23234c;
  }

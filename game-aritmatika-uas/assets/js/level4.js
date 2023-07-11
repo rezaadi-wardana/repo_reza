@@ -13,11 +13,13 @@ lanjutL4.addEventListener("click", () => {
     level = 4;
     tampil();
 
+    [num1, num2] = [null, null];
         const questionGenerator4 = () => {
+
 
             let operators = ["+", "-","*","/"];
             let pembagi = ["2","3"];
-            let nilaiBagi = ["6","12","18","24","30","42","48","66","52","60","72"]
+            let nilaiBagi = ["24","30","42","48","66","54","60","72"];
 
            
             let randomOperator = operators[Math.floor(Math.random() * operators.length)];
@@ -102,6 +104,37 @@ lanjutL4.addEventListener("click", () => {
             document.getElementById("ans5").innerHTML = ans5;
             document.getElementById("ans6").innerHTML = ans6;
           
+            const check = () => {
+              errorMessage.classList.add("hide");
+              let userInput = document.getElementById("inputValue").value;
+              //jika inuptan tidak kosong
+              if (userInput) {
+              if (userInput == answerValue) {
+                  let username = document.getElementById('username').value;
+                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
+                  selesai.classList.remove('hide');
+                  document.getElementById("kotakan").style.backgroundColor = "transparent";
+                  document.getElementById("kotakan").style.display = "inline-flex";
+                  document.getElementById("kotakan").style.width = "auto";
+                  result.style.backgroundColor = "#79ff80";
+
+                  // lanjutL2.style.margin = "auto";
+
+
+              }
+             
+              else {
+                  let username = document.getElementById('username').value;
+                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
+                  document.getElementById("kotakan").style.backgroundColor = "transparent";
+                  result.style.backgroundColor = "#ff9a9a";
+
+              }
+              }
+              //jika jawaban kosong
+             
+          }
+
             btnAns1.addEventListener("click", () => {
               let answere = parseInt(ans1);
               document.getElementById("inputValue").value = answere;
@@ -135,35 +168,7 @@ lanjutL4.addEventListener("click", () => {
             
            
           
-            const check = () => {
-                errorMessage.classList.add("hide");
-                let userInput = document.getElementById("inputValue").value;
-                //jika inuptan tidak kosong
-                if (userInput) {
-                if (userInput == answerValue) {
-                    let username = document.getElementById('username').value;
-                    stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
-                    selesai.classList.remove('hide');
-                    document.getElementById("kotakan").style.backgroundColor = "transparent";
-                    document.getElementById("kotakan").style.display = "inline-flex";
-                    document.getElementById("kotakan").style.width = "auto";
-                    // lanjutL2.style.margin = "auto";
-
-
-                }
-               
-                else {
-                    let username = document.getElementById('username').value;
-                    stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
-                    document.getElementById("kotakan").style.backgroundColor = "transparent";
-                }
-                }
-                //jika jawaban kosong
-                else {
-                errorMessage.classList.remove("hide");
-                errorMessage.innerHTML = "Jawaban tidak boleh kosong";
-                }
-            }
+            
             
           };
         questionGenerator4()
@@ -171,7 +176,9 @@ lanjutL4.addEventListener("click", () => {
 
     const stopGame = (resultText) => {
         result.innerHTML = resultText;
-        lanjutL4.innerText = "Ulangi";
+        lanjutL4.innerText = "↩ Coba Lagi";
+        result.classList.remove('hide')
+        
         controls.classList.remove("hide");
         startBtn.classList.add("hide");
         lanjutL2.classList.add("hide");

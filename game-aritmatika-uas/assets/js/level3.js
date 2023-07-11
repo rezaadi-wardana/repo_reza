@@ -12,11 +12,13 @@ lanjutL3.addEventListener("click", () => {
     level = 3;
     tampil();
 
+    [num1, num2] = [null, null];
         const questionGenerator3 = () => {
+
 
             let operators = ["+", "-","*","/"];
             let pembagi = ["2","3"];
-            let nilaiBagi = ["6","12","18","24","30","42","48","66","52","60","72"]
+            let nilaiBagi = ["24","30","42","48","66","54","60","72"]
 
            
             let randomOperator = operators[Math.floor(Math.random() * operators.length)];
@@ -73,25 +75,64 @@ lanjutL3.addEventListener("click", () => {
             //     question.innerHTML = `${num1} * ${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
             // }
             
-            document.getElementById("btn-ans1").style.order = `${randomValue(1,5)}`;
-            document.getElementById("btn-ans2").style.order = `${randomValue(1,5)}`;
-            document.getElementById("btn-ans3").style.order = `${randomValue(1,5)}`;
-            document.getElementById("btn-ans4").style.order = `${randomValue(1,5)}`;
+            document.getElementById("btn-ans1").style.order = `${randomValue(1,7)}`;
+            document.getElementById("btn-ans2").style.order = `${randomValue(1,7)}`;
+            document.getElementById("btn-ans3").style.order = `${randomValue(1,7)}`;
+            document.getElementById("btn-ans4").style.order = `${randomValue(1,7)}`;
+            document.getElementById("btn-ans5").style.order = `${randomValue(1,7)}`;
+            document.getElementById("btn-ans6").style.order = `${randomValue(1,7)}`;
             
             let ans1 = document.getElementById("ans1")
             let ans2 = document.getElementById("ans2")
             let ans3 = document.getElementById("ans3")
             let ans4 = document.getElementById("ans4")
+            let ans5 = document.getElementById("ans5")
+            let ans6 = document.getElementById("ans6")
             
             ans1 = answerValue;
             ans2 = randomValue(1,100);
             ans3 = randomValue(1,100);
             ans4 = randomValue(1,100);
+            ans5 = randomValue(1,100);
+            ans6 = randomValue(1,100);
 
             document.getElementById("ans1").innerHTML = ans1;
             document.getElementById("ans2").innerHTML = ans2;
             document.getElementById("ans3").innerHTML = ans3;
             document.getElementById("ans4").innerHTML = ans4;
+            document.getElementById("ans5").innerHTML = ans5;
+            document.getElementById("ans6").innerHTML = ans6;
+            
+            const check = () => {
+              errorMessage.classList.add("hide");
+              let userInput = document.getElementById("inputValue").value;
+              //jika inuptan tidak kosong
+              if (userInput) {
+              if (userInput == answerValue) {
+                  let username = document.getElementById('username').value;
+                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
+                  lanjutL4.classList.remove('hide');
+                  document.getElementById("kotakan").style.backgroundColor = "transparent";
+                  document.getElementById("kotakan").style.display = "inline-flex";
+                  document.getElementById("kotakan").style.width = "auto";
+                  result.style.backgroundColor = "#79ff80";
+
+                  // lanjutL2.style.margin = "auto";
+
+
+              }
+             
+              else {
+                  let username = document.getElementById('username').value;
+                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
+                  document.getElementById("kotakan").style.backgroundColor = "transparent";
+                  result.style.backgroundColor = "#ff9a9a";
+
+              }
+              }
+              //jika jawaban kosong
+             
+          }
 
             btnAns1.addEventListener("click", () => {
                 let answere = parseInt(ans1);
@@ -113,38 +154,20 @@ lanjutL3.addEventListener("click", () => {
                 document.getElementById("inputValue").value = answere;
                 check()
             });
+            btnAns5.addEventListener("click", () => {
+              let answere = parseInt(ans5);
+              document.getElementById("inputValue").value = answere;
+              check()
+            });
+            btnAns6.addEventListener("click", () => {
+              let answere = parseInt(ans6);
+              document.getElementById("inputValue").value = answere;
+              check()
+            });
             
            
           
-            const check = () => {
-                errorMessage.classList.add("hide");
-                let userInput = document.getElementById("inputValue").value;
-                //jika inuptan tidak kosong
-                if (userInput) {
-                if (userInput == answerValue) {
-                    let username = document.getElementById('username').value;
-                    stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
-                    lanjutL4.classList.remove('hide');
-                    document.getElementById("kotakan").style.backgroundColor = "transparent";
-                    document.getElementById("kotakan").style.display = "inline-flex";
-                    document.getElementById("kotakan").style.width = "auto";
-                    // lanjutL2.style.margin = "auto";
-
-
-                }
-               
-                else {
-                    let username = document.getElementById('username').value;
-                    stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
-                    document.getElementById("kotakan").style.backgroundColor = "transparent";
-                }
-                }
-                //jika jawaban kosong
-                else {
-                errorMessage.classList.remove("hide");
-                errorMessage.innerHTML = "Jawaban tidak boleh kosong";
-                }
-            }
+          
             
           };
         questionGenerator3()
@@ -152,7 +175,9 @@ lanjutL3.addEventListener("click", () => {
 
     const stopGame = (resultText) => {
         result.innerHTML = resultText;
-        lanjutL3.innerText = "Ulangi";
+        lanjutL3.innerText = "↩ Coba Lagi";
+        result.classList.remove('hide')
+
         controls.classList.remove("hide");
         startBtn.classList.add("hide");
         lanjutL2.classList.add("hide");

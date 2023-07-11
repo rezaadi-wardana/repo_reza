@@ -7,16 +7,16 @@ lanjutL2.addEventListener("click", () => {
     ucapan.classList.remove('hide');
     lanjutL2.classList.remove('hide');
     lanjutL3.classList.add('hide');
-    btnAns5.classList.remove('hide')
-    btnAns6.classList.remove('hide')
     level++;
     tampil();
-
-        const questionGenerator2 = () => {
+    
+    const questionGenerator2 = () => {
+        btnAns5.classList.remove('hide')
+        btnAns6.classList.remove('hide')
 
             let operators = ["+", "-","*","/"];
             let pembagi = ["2","3"];
-            let nilaiBagi = ["6","12","18","24","30","42","48","66","52","60","72"]
+            let nilaiBagi = ["6","12","18","24","30","42","48","66","54","60","72"]
 
             //menentukan angka anatara 1-20
             let [num1, num2] = [randomValue(1, 10), randomValue(1, 10)];
@@ -84,6 +84,40 @@ lanjutL2.addEventListener("click", () => {
             document.getElementById("ans5").innerHTML = ans5;
             document.getElementById("ans6").innerHTML = ans6;
           
+          const check = () => {
+              // errorMessage.classList.add("hide");
+              let userInput = document.getElementById("inputValue").value;
+              //jika inuptan tidak kosong
+              if (userInput) {
+                if (userInput == answerValue) {
+                  let username = document.getElementById('username').value;
+                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span><br>`);
+                  lanjutL3.classList.remove('hide');
+                  document.getElementById("kotakan").style.backgroundColor = "transparent";
+                  document.getElementById("kotakan").style.display = "inline-flex";
+                  document.getElementById("kotakan").style.width = "auto";
+                  result.style.backgroundColor = "#79ff80";
+
+                  // lanjutL2.style.margin = "auto";
+                }
+                // // jika jawaban benar
+                // else if (operatorQuestion && !operators.includes(userInput)) {
+                //   errorMessage.classList.remove("hide");
+                //   errorMessage.innerHTML = "Tolong masukkan angka yang benar!";
+                // }
+                // //jika jawaban salah
+                else {
+                  let username = document.getElementById('username').value;
+                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
+                  document.getElementById("kotakan").style.backgroundColor = "transparent";
+                  result.style.backgroundColor = "#ff9a9a";
+
+                }
+              }
+            }
+              //jika jawaban kosong
+              
+
             btnAns1.addEventListener("click", () => {
               let answere = parseInt(ans1);
               document.getElementById("inputValue").value = answere;
@@ -117,48 +151,17 @@ lanjutL2.addEventListener("click", () => {
             
             //mengecek jawaban 
             // submitBtn.addEventListener("click", () => {
-            const check = () => {
-              errorMessage.classList.add("hide");
-              let userInput = document.getElementById("inputValue").value;
-              //jika inuptan tidak kosong
-              if (userInput) {
-                if (userInput == answerValue) {
-                  let username = document.getElementById('username').value;
-                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span><br>`);
-                  lanjutL3.classList.remove('hide');
-                  document.getElementById("kotakan").style.backgroundColor = "transparent";
-                  document.getElementById("kotakan").style.display = "inline-flex";
-                  document.getElementById("kotakan").style.width = "auto";
-                  
-
-                  // lanjutL2.style.margin = "auto";
-                }
-                // // jika jawaban benar
-                // else if (operatorQuestion && !operators.includes(userInput)) {
-                //   errorMessage.classList.remove("hide");
-                //   errorMessage.innerHTML = "Tolong masukkan angka yang benar!";
-                // }
-                // //jika jawaban salah
-                else {
-                  let username = document.getElementById('username').value;
-                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
-                  document.getElementById("kotakan").style.backgroundColor = "transparent";
-                }
-              }
-              //jika jawaban kosong
-              else {
-                errorMessage.classList.remove("hide");
-                errorMessage.innerHTML = "Jawaban tidak boleh kosong";
-              }
-            }
+           
+          
            
             level--;
           };
-        questionGenerator2()
+          questionGenerator2()
 
     const stopGame = (resultText) => {
         result.innerHTML = resultText;
-        lanjutL2.innerText = "Ulangi";
+        result.classList.remove('hide')
+        lanjutL2.innerText = "↩ Coba Lagi";
         startBtn.classList.add("hide");
         judul.classList.add("hide");
         deskripsi.classList.add("hide");
