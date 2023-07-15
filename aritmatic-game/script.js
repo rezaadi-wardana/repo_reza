@@ -23,7 +23,8 @@ const questionGenerator = () => {
   }
 
   //Solve equation
-  let solution = eval(`${num1}${randomOperator}${num2}`);
+  num3 = num1-num2;
+  let solution = eval(`${num1}${randomOperator}${num2}${randomOperator}${num3}`);
 
   //For placing the input at random position
   //(1 for num1, 2 for num2, 3 for operator, anything else(4) for solution)
@@ -31,17 +32,17 @@ const questionGenerator = () => {
 
   if (randomVar == 1) {
     answerValue = num1;
-    question.innerHTML = `<input type="number" id="inputValue" placeholder="?"\> ${randomOperator} ${num2} = ${solution}`;
+    question.innerHTML = `<input type="number" id="inputValue" placeholder="?"\> ${randomOperator} ${num2} ${randomOperator} ${num3} = ${solution}`;
   } else if (randomVar == 2) {
     answerValue = num2;
-    question.innerHTML = `${num1} ${randomOperator}<input type="number" id="inputValue" placeholder="?"\> = ${solution}`;
+    question.innerHTML = `${num1} ${randomOperator}&<input type="number" id="inputValue" placeholder="?"\> ${randomOperator} ${num3}  = ${solution}`;
   } else if (randomVar == 3) {
-    answerValue = randomOperator;
+    answerValue = num3;
     operatorQuestion = true;
-    question.innerHTML = `${num1} <input type="text" id="inputValue" placeholder="?"\> ${num2} = ${solution}`;
+    question.innerHTML = `${num1} ${randomOperator} ${num2} ${randomOperator}<input type="text" id="inputValue" placeholder="?"\> = ${solution}`;
   } else {
     answerValue = solution;
-    question.innerHTML = `${num1} ${randomOperator} ${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
+    question.innerHTML = `${num1} ${randomOperator} ${num2} ${randomOperator} ${num3} = <input type="number" id="inputValue" placeholder="?"\>`;
   }
 
   //User Input Check

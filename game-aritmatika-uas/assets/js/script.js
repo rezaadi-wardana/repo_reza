@@ -11,6 +11,7 @@ const judul = document.getElementById("judul");
 const deskripsi = document.getElementById("deskripsi");
 const tampilkanNama = document.getElementById("tampilkanNama");
 const ucapan = document.getElementById("ucapan");
+const ucapan2 = document.getElementById("ucapan2");
 const username = document.getElementById("username");
 const labelUsername = document.getElementById("labelUsername");
 const answer = document.getElementById("answer");
@@ -20,8 +21,11 @@ let btnAns3 = document.getElementById("btn-ans3");
 let btnAns4 = document.getElementById("btn-ans4");
 let btnAns5 = document.getElementById("btn-ans5");
 let btnAns6 = document.getElementById("btn-ans6");
+let kotakan = document.getElementById('kotakan');
+let skor = document.getElementById('score');
 
 let answerValue;
+let score=0;
 // let operatorQuestion;
 
 //Mendapatkan nilai random
@@ -32,17 +36,21 @@ function tampil(){
   let username = document.getElementById('username').value;
   tampilkanNama.innerHTML = "Nama Pemain : ";
   tampilkanNama.innerHTML += username;
-  document.getElementById("tampilkanLevel").innerHTML = "Level: " +  level;
+  document.getElementById("tampilkanLevel").innerHTML = "LEVEL " +  level;
+  ucapan2.classList.remove('hide');
 };
 
 ucapan.classList.add('hide');
+ucapan2.classList.add('hide');
 lanjutL2.classList.add('hide');
 lanjutL3.classList.add('hide');
 lanjutL4.classList.add('hide');
 selesai.classList.add('hide');
 result.classList.add('hide')
 
-
+kotakan.addEventListener("click", () => {
+  kotakan.style.animation = "none";
+})
 
 let operators = ["+", "-"];
 
@@ -105,12 +113,14 @@ const questionGenerator = () => {
   document.getElementById("ans5").innerHTML = ans5;
   document.getElementById("ans6").innerHTML = ans6;
 
-  const score = () => {
-    for (let i = 0;i<3;i++){
-      questionGenerator();
-      tampil()
-  }
-  }
+  // const hitungscore = (value) => {
+  //   if (value =  true) {
+  //     score+10
+  //   }else {
+  //     score-5
+  //   }
+  // }
+  
   const check = () => {
     // errorMessage.classList.add("hide");
     let userInput = document.getElementById("inputValue").value;
@@ -120,13 +130,16 @@ const questionGenerator = () => {
       if (userInput == answerValue) {
 
         let username = document.getElementById('username').value;
-        stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
         lanjutL2.classList.remove('hide');
         document.getElementById("kotakan").style.backgroundColor = "transparent";
         document.getElementById("kotakan").style.display = "inline-flex";
         document.getElementById("kotakan").style.width = "auto";
         result.style.backgroundColor = "#79ff80";
-
+        score += 10;
+        skor.innerHTML = score;
+        
+        stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
+        
         // lanjutL2.style.margin = "auto";
 
 
@@ -138,12 +151,17 @@ const questionGenerator = () => {
       // }
       // //jika jawaban salah
       else {
+        
         let username = document.getElementById('username').value;
-        stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
         document.getElementById("kotakan").style.backgroundColor = "transparent";
         result.style.backgroundColor = "#ff9a9a";
-
+        score-=5;
+        skor.innerHTML = score;
+        stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
+        // return;
+        // document.getElementById("score").in/nerHTML = score-5;
       }
+      
     }
     //jika jawaban kosong
   
@@ -210,7 +228,7 @@ startBtn.addEventListener("click", () => {
   result.innerHTML = resultText;
   startBtn.innerText = "↩ Coba Lagi";
   result.classList.remove('hide')
-
+  
   controls.classList.remove("hide");
   startBtn.classList.remove("hide");
   judul.classList.add("hide");

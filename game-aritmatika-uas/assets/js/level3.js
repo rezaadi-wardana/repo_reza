@@ -14,7 +14,7 @@ lanjutL3.addEventListener("click", () => {
 
     [num1, num2] = [null, null];
         const questionGenerator3 = () => {
-
+          
 
             let operators = ["+", "-","*","/"];
             let pembagi = ["2","3"];
@@ -103,20 +103,21 @@ lanjutL3.addEventListener("click", () => {
             document.getElementById("ans5").innerHTML = ans5;
             document.getElementById("ans6").innerHTML = ans6;
             
-            const check = () => {
+            const check3 = () => {
               errorMessage.classList.add("hide");
               let userInput = document.getElementById("inputValue").value;
               //jika inuptan tidak kosong
               if (userInput) {
               if (userInput == answerValue) {
                   let username = document.getElementById('username').value;
-                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
                   lanjutL4.classList.remove('hide');
                   document.getElementById("kotakan").style.backgroundColor = "transparent";
                   document.getElementById("kotakan").style.display = "inline-flex";
                   document.getElementById("kotakan").style.width = "auto";
                   result.style.backgroundColor = "#79ff80";
-
+                  score += 15;
+                  skor.innerHTML =score;
+                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
                   // lanjutL2.style.margin = "auto";
 
 
@@ -124,10 +125,11 @@ lanjutL3.addEventListener("click", () => {
              
               else {
                   let username = document.getElementById('username').value;
-                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
                   document.getElementById("kotakan").style.backgroundColor = "transparent";
                   result.style.backgroundColor = "#ff9a9a";
-
+                  // score-=5;
+                  // skor.innerHTML = score;
+                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
               }
               }
               //jika jawaban kosong
@@ -137,32 +139,32 @@ lanjutL3.addEventListener("click", () => {
             btnAns1.addEventListener("click", () => {
                 let answere = parseInt(ans1);
                 document.getElementById("inputValue").value = answere;
-                check()
+                check3()
             });
             btnAns2.addEventListener("click", () => {
                 let answere = parseInt(ans2);
                 document.getElementById("inputValue").value = answere;
-                check()
+                check3()
             });
             btnAns3.addEventListener("click", () => {
                 let answere = parseInt(ans3);
                 document.getElementById("inputValue").value = answere;
-                check()
+                check3()
             });
             btnAns4.addEventListener("click", () => {
                 let answere = parseInt(ans4);
                 document.getElementById("inputValue").value = answere;
-                check()
+                check3()
             });
             btnAns5.addEventListener("click", () => {
               let answere = parseInt(ans5);
               document.getElementById("inputValue").value = answere;
-              check()
+              check3()
             });
             btnAns6.addEventListener("click", () => {
               let answere = parseInt(ans6);
               document.getElementById("inputValue").value = answere;
-              check()
+              check3()
             });
             
            
