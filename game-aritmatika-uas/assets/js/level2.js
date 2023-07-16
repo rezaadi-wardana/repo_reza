@@ -1,7 +1,7 @@
 lanjutL2.addEventListener("click", () => {
     answerValue = "";
-    errorMessage.innerHTML = "";
-    errorMessage.classList.add("hide");
+    // errorMessage.innerHTML = "";
+    // errorMessage.classList.add("hide");
     controls.classList.add("hide");
     startBtn.classList.add("hide");
     ucapan.classList.remove('hide');
@@ -101,22 +101,18 @@ lanjutL2.addEventListener("click", () => {
                   score += 15;
                   skor.innerHTML = score;
                   stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span><br>`);
-
-                  // lanjutL2.style.margin = "auto";
+              
                 }
-                // // jika jawaban benar
-                // else if (operatorQuestion && !operators.includes(userInput)) {
-                //   errorMessage.classList.remove("hide");
-                //   errorMessage.innerHTML = "Tolong masukkan angka yang benar!";
-                // }
-                // //jika jawaban salah
+              
                 else {
                   let username = document.getElementById('username').value;
                   document.getElementById("kotakan").style.backgroundColor = "transparent";
                   result.style.backgroundColor = "#ff9a9a";
-                  // score-=5;
-                  // skor.innerHTML = score;
+                  score-=5;
+                  skor.innerHTML = score;
                   stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
+                  // return score;
+
                 }
               }
             }
@@ -154,10 +150,7 @@ lanjutL2.addEventListener("click", () => {
               document.getElementById("inputValue").value = answere;
               check2()
             });
-            
-            //mengecek jawaban 
-            // submitBtn.addEventListener("click", () => {
-           
+
           
            
             level--;

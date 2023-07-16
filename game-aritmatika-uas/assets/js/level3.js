@@ -1,7 +1,5 @@
 lanjutL3.addEventListener("click", () => {
     answerValue = "";
-    errorMessage.innerHTML = "";
-    errorMessage.classList.add("hide");
     controls.classList.add("hide");
     startBtn.classList.add("hide");
     ucapan.classList.remove('hide');
@@ -57,23 +55,6 @@ lanjutL3.addEventListener("click", () => {
               answerValue = solution;
               question.innerHTML = `${num1} * ${num2} - ${num1/2}  = <input type="number" id="inputValue" placeholder="?"\>`;
             }
-          
-
-            // let solution = eval(`${num1}${randomOperator}${num2}`);
-          
-            // if (randomOperator == "-") {
-            //     answerValue = solution;
-            //     question.innerHTML = `${num1} - ${num2}  = <input type="number" id="inputValue" placeholder="?"\>`;
-            // } else if(randomOperator == "+") {
-            //     answerValue = solution;
-            //     question.innerHTML = `${num1} + ${num2}  = <input type="number" id="inputValue" placeholder="?"\>`;
-            // } else if(randomOperator == "/") {
-            //     answerValue = solution;
-            //     question.innerHTML = `${num1} / ${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
-            // } else {
-            //     answerValue = solution;
-            //     question.innerHTML = `${num1} * ${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
-            // }
             
             document.getElementById("btn-ans1").style.order = `${randomValue(1,7)}`;
             document.getElementById("btn-ans2").style.order = `${randomValue(1,7)}`;
@@ -104,7 +85,7 @@ lanjutL3.addEventListener("click", () => {
             document.getElementById("ans6").innerHTML = ans6;
             
             const check3 = () => {
-              errorMessage.classList.add("hide");
+              // errorMessage.classList.add("hide");
               let userInput = document.getElementById("inputValue").value;
               //jika inuptan tidak kosong
               if (userInput) {
@@ -115,21 +96,20 @@ lanjutL3.addEventListener("click", () => {
                   document.getElementById("kotakan").style.display = "inline-flex";
                   document.getElementById("kotakan").style.width = "auto";
                   result.style.backgroundColor = "#79ff80";
-                  score += 15;
+                  score += 20;
                   skor.innerHTML =score;
                   stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
-                  // lanjutL2.style.margin = "auto";
-
 
               }
              
-              else {
+              else if(userInput !== answerValue) {
                   let username = document.getElementById('username').value;
                   document.getElementById("kotakan").style.backgroundColor = "transparent";
                   result.style.backgroundColor = "#ff9a9a";
-                  // score-=5;
-                  // skor.innerHTML = score;
+                  score-=5;
+                  skor.innerHTML = score;
                   stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
+
               }
               }
               //jika jawaban kosong
@@ -179,7 +159,6 @@ lanjutL3.addEventListener("click", () => {
         result.innerHTML = resultText;
         lanjutL3.innerText = "↩ Coba Lagi";
         result.classList.remove('hide')
-
         controls.classList.remove("hide");
         startBtn.classList.add("hide");
         lanjutL2.classList.add("hide");

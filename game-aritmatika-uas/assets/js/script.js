@@ -6,7 +6,7 @@ const selesai = document.getElementById("selesai");
 const question = document.getElementById("question");
 const controls = document.querySelector(".controls-container");
 const result = document.getElementById("result");
-const errorMessage = document.getElementById("error-msg");
+// const errorMessage = document.getElementById("error-msg");
 const judul = document.getElementById("judul");
 const deskripsi = document.getElementById("deskripsi");
 const tampilkanNama = document.getElementById("tampilkanNama");
@@ -22,13 +22,11 @@ let btnAns4 = document.getElementById("btn-ans4");
 let btnAns5 = document.getElementById("btn-ans5");
 let btnAns6 = document.getElementById("btn-ans6");
 let kotakan = document.getElementById('kotakan');
-let skor = document.getElementById('score');
 
 let answerValue;
 let score=0;
-// let operatorQuestion;
+let skor = document.getElementById('score');
 
-//Mendapatkan nilai random
 const randomValue = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 let level = 1;
@@ -68,10 +66,7 @@ const questionGenerator = () => {
   if (randomOperator == "-" && num2 > num1) {
     [num1, num2] = [num2, num1];
   }
-  // if (randomOperator == "/" && num2 > num1) {
-  //   [num1, num2] = [num2, num1];
-  // }
-
+  
   //membuat variabel jawaban 
   let solution = eval(`${num1}${randomOperator}${num2}`);
 
@@ -113,13 +108,7 @@ const questionGenerator = () => {
   document.getElementById("ans5").innerHTML = ans5;
   document.getElementById("ans6").innerHTML = ans6;
 
-  // const hitungscore = (value) => {
-  //   if (value =  true) {
-  //     score+10
-  //   }else {
-  //     score-5
-  //   }
-  // }
+  
   
   const check = () => {
     // errorMessage.classList.add("hide");
@@ -135,36 +124,25 @@ const questionGenerator = () => {
         document.getElementById("kotakan").style.display = "inline-flex";
         document.getElementById("kotakan").style.width = "auto";
         result.style.backgroundColor = "#79ff80";
+      
         score += 10;
         skor.innerHTML = score;
-        
         stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
         
-        // lanjutL2.style.margin = "auto";
-
-
-      }
-      // // jika jawaban benar
-      // else if (operatorQuestion && !operators.includes(userInput)) {
-      //   errorMessage.classList.remove("hide");
-      //   errorMessage.innerHTML = "Tolong masukkan angka yang benar!";
-      // }
-      // //jika jawaban salah
-      else {
+      }else if  (userInput !== answerValue){
         
         let username = document.getElementById('username').value;
         document.getElementById("kotakan").style.backgroundColor = "transparent";
-        result.style.backgroundColor = "#ff9a9a";
-        score-=5;
+        result.style.backgroundColor = "#ff9a9a";  
+        score -= 5;
         skor.innerHTML = score;
         stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
-        // return;
-        // document.getElementById("score").in/nerHTML = score-5;
-      }
+  
+  }
+  
       
     }
-    //jika jawaban kosong
-  
+    
   }
 
   btnAns1.addEventListener("click", () => {
@@ -197,21 +175,14 @@ const questionGenerator = () => {
     document.getElementById("inputValue").value = answere;
     check()
   });
-  
-  //mengecek jawaban 
-  // submitBtn.addEventListener("click", () => {
-  
-  // );
+
   
 };
 
 
 //Start Game
 startBtn.addEventListener("click", () => {
-  // operatorQuestion = false;
   answerValue = "";
-  errorMessage.innerHTML = "";
-  errorMessage.classList.add("hide");
   controls.classList.add("hide");
   startBtn.classList.add("hide");
   ucapan.classList.remove('hide');
@@ -228,12 +199,10 @@ startBtn.addEventListener("click", () => {
   result.innerHTML = resultText;
   startBtn.innerText = "↩ Coba Lagi";
   result.classList.remove('hide')
-  
   controls.classList.remove("hide");
   startBtn.classList.remove("hide");
   judul.classList.add("hide");
   deskripsi.classList.add("hide");
-  // ucapan.classList.add('hide');
   username.classList.add('hide');
   labelUsername.classList.add('hide');
 };

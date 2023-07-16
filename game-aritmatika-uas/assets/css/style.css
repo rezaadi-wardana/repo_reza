@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+
 *{
    padding: 0;
    margin: 0;
@@ -62,7 +65,7 @@
   border-radius: 5px;
  }
  .container-ucapan a button:hover {
-  background-color:#ddaa02;
+  background-color:#f7e7b5
   /* border: #131333 2px solid; */
  }
 .ucapan{
@@ -95,7 +98,6 @@
  .container {
     background-color: transparent;
     width: 80%;
-    /* max-width: 31.25em; */
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -104,32 +106,14 @@
     border-radius: 0.5em;
   }
   .container h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    font-family: 'Exo', sans-serif;
     color: #23234c;
     text-align: center;
     font-weight: 500;
     line-height: 1.8em;
   }
-  /* .container #submit-btn {
-    font-size: 1.2em;
-    font-weight: 500;
-    display: block;
-    margin: 0 auto;
-    background-color: #f4c531;
-    border-radius: 0.3em;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: #23234c;
-    padding: 0.6em 2em;
-  }
-  #error-msg {
-    text-align: center;
-    margin-top: 1em;
-    background-color: #ffdde0;
-    color: #d62f2f;
-    padding: 0.2em 0;
-  } */
+  
   .container #question {
     background-color: #eeedf1;
     font-size: 2em;
@@ -139,7 +123,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1.4em 0 1em 0;
+    margin: 1.2em 0 1em 0;
     padding: 1em 0;
     border-radius: 5px;
   }
@@ -159,17 +143,17 @@
     border-color: #f4c531;
     outline: none;
   }
-  /*Hide Number Arrows*/
-  /* .container input[type="number"] {
-    -moz-appearance: textfield;
-  } */
+  
   .container input[type="number"]::-webkit-outer-spin-button,
   .container input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
   .controls-container {
-    background-image: url(../img/bga.jpg);
+    transition: 1s ease;
+
+    /* background-image: url(../img/bga.jpg); */
+    background-image: radial-gradient(#fdfcc3, #f4d941);
     background-size: cover;
     position: absolute;
     display: flex;
@@ -182,14 +166,15 @@
     top: 0;
   }
   .game-box .controls-container h3 {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: bold;
+    color:#131333
    }
   
   #start-btn, #lanjutL2, #lanjutL3, #lanjutL4, #selesai {
     font-size: 1.2em;
     font-weight: 500;
-    background-color: #faf5b0;
+    background-color: #f4c531;
     color: #23234c;
     border: none;
     outline: none;
@@ -197,6 +182,7 @@
     padding: 0.8em 1.8em;
     margin: 0px 3em;
     border-radius: 0.3em;
+    z-index: 9999;
   }
   #start-btn:hover, #lanjutL2:hover, #lanjutL3:hover, #lanjutL4:hover, #selesai :hover {
     background-color: #fffbe7;
@@ -205,10 +191,9 @@
     margin-bottom: 1em;
     padding: 20px;
     font-size: 1.5em;
-    color: #131333;
-    background-color:#ff9a9a;
+    color: #000000;
     border-radius: 10px;
-    transition: 3s ease;
+    
   }
   #result span {
     font-weight: 600;
@@ -222,7 +207,6 @@
   }
   .container #answer {
     display: grid;
-    /* margin: 5px; */
     height: 200px;
     grid-template-columns: auto auto auto auto auto auto;
     background-color: transparent;
@@ -238,7 +222,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: linear-gradient(#f4c531 ,#ffa600); */
   background-color:#ffae00;
   font-size: 30px;
   border-radius: 0.2%;
@@ -258,8 +241,10 @@
 
 
   .game-box .controls-container p {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 30px;
+    color: #bd7b02;
+    font-weight: 800;
    }
    label {
     font-size: 20px;
@@ -275,7 +260,7 @@
   .kotakan {
     display: grid;
     grid-template-columns: auto;
-    background-color:#f4c531;
+    background-color:#ffae00;
     width: 30%;
     height: 13em;
     padding: 10px;
@@ -284,6 +269,7 @@
     align-items: center;
     grid-row-gap: 0px;
     animation:  animasi 3s infinite;
+    z-index: 99999;
     
   }
   @keyframes animasi{
@@ -310,14 +296,141 @@
     grid-template-rows: 5rem;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+    background-color: orange;
  }
  .footer div {
     margin: auto;
  }
  .footer div a {
+  font-size: 1.2em;
     padding: 10px 20px;
     /* background-color:#f4c531; */
     text-decoration: none;
     color: #23234c;
  }
+
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+.circles li{
+  
+    position: absolute;
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:100px;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(transparent);
+    animation: animate 25s linear infinite;
+    bottom: -100px;
+    /* opacity: 0.2; */
+    color: #ffbb00;
+    font-weight: 700;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: -0.75;
+        border-radius: 50%;
+    }
+
+}
+
