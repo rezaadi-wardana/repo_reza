@@ -124,20 +124,24 @@ const questionGenerator = () => {
         document.getElementById("kotakan").style.display = "inline-flex";
         document.getElementById("kotakan").style.width = "auto";
         result.style.backgroundColor = "#79ff80";
-      
+        score=score;
         score += 10;
         skor.innerHTML = score;
-        stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
+        stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span><br>Score +10`);
+  startBtn.classList.add("hide");
+        
         
       }else if  (userInput !== answerValue){
         
         let username = document.getElementById('username').value;
+        lanjutL2.classList.remove('hide');
         document.getElementById("kotakan").style.backgroundColor = "transparent";
         result.style.backgroundColor = "#ff9a9a";  
-        score -= 5;
-        skor.innerHTML = score;
+        document.getElementById("kotakan").style.backgroundColor = "transparent";
+        document.getElementById("kotakan").style.display = "inline-flex";
+        document.getElementById("kotakan").style.width = "auto";
         stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
-  
+        
   }
   
       
@@ -176,7 +180,6 @@ const questionGenerator = () => {
     check()
   });
 
-  
 };
 
 
@@ -195,7 +198,6 @@ startBtn.addEventListener("click", () => {
  
 
   const stopGame = (resultText) => {
- 
   result.innerHTML = resultText;
   startBtn.innerText = "↩ Coba Lagi";
   result.classList.remove('hide')
@@ -205,4 +207,11 @@ startBtn.addEventListener("click", () => {
   deskripsi.classList.add("hide");
   username.classList.add('hide');
   labelUsername.classList.add('hide');
+  // startBtn.addEventListener('click', () => {
+  //   if(score>9){
+  //     skor.innerHTML=score=0;
+  //   }else if(score<9){
+  //     skor.innerHTML=score;
+  //   }
+  // })
 };

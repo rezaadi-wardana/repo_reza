@@ -96,19 +96,29 @@ lanjutL3.addEventListener("click", () => {
                   document.getElementById("kotakan").style.display = "inline-flex";
                   document.getElementById("kotakan").style.width = "auto";
                   result.style.backgroundColor = "#79ff80";
+                  score=score;
                   score += 20;
-                  skor.innerHTML =score;
-                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span>`);
+                  skor.innerHTML = score;
+                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span><br>Score +15`);
+                  lanjutL3.classList.add('hide');
 
+                  // lanjutL3.addEventListener('click', () => {
+                  //   skor.innerHTML=score-20;
+                  // })
               }
              
               else if(userInput !== answerValue) {
                   let username = document.getElementById('username').value;
                   document.getElementById("kotakan").style.backgroundColor = "transparent";
+                  lanjutL4.classList.remove('hide');
                   result.style.backgroundColor = "#ff9a9a";
-                  score-=5;
-                  skor.innerHTML = score;
+                  document.getElementById("kotakan").style.backgroundColor = "transparent";
+                document.getElementById("kotakan").style.display = "inline-flex";
+                document.getElementById("kotakan").style.width = "auto";
                   stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
+                  lanjutL3.addEventListener('click', () => {
+                    skor.innerHTML=score;
+                  })
 
               }
               }
@@ -166,6 +176,21 @@ lanjutL3.addEventListener("click", () => {
         deskripsi.classList.add("hide");
         username.classList.add('hide');
         labelUsername.classList.add('hide');
+    //     lanjutL3.addEventListener('click', () => {
+    //       if(score>44){
+    //         skor.innerHTML=score=25;
+    //       }
+    //       else if(score>34){
+    //         skor.innerHTML=score=15;
+    //     }
+    //       else if(score>24){
+    //           skor.innerHTML=score=10;
+    //       }else if(score>9){
+    //         skor.innerHTML=score=0;
+    //       }else if (score<9){
+    //         skor.innerHTML=score;
+    //       }
+    // });
       };
       
     

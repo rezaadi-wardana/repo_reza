@@ -98,20 +98,25 @@ lanjutL4.addEventListener("click", () => {
                 document.getElementById("kotakan").style.display = "inline-flex";
                 document.getElementById("kotakan").style.width = "auto";
                   result.style.backgroundColor = "#79ff80";
+                  score =score;
                   score += 25;
                   skor.innerHTML = score;
-                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span> <br> Skor Anda : ${score}`);
-             
+                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span> <br><br>\tPERMAINAN SELESAI<BR>\tTotal Skor Anda : ${score}`);
+                  lanjutL4.classList.add('hide');
+                
 
                 }
                 
                 else if(userInput !== answerValue) {
                   document.getElementById("kotakan").style.backgroundColor = "transparent";
                   result.style.backgroundColor = "#ff9a9a";
-                  score-=5;
-                  skor.innerHTML = score;
+                  selesai.classList.remove('hide');
+                  document.getElementById("kotakan").style.backgroundColor = "transparent";
+                document.getElementById("kotakan").style.display = "inline-flex";
+                document.getElementById("kotakan").style.width = "auto";
+                  score=score;
                   let username = document.getElementById('username').value;
-                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
+                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span><br><br>\tPERMAINAN SELESAI<BR>\tTotal Skor Anda : ${score}`);
                   // return score;
 
               }
@@ -163,7 +168,6 @@ lanjutL4.addEventListener("click", () => {
         result.innerHTML = resultText;
         lanjutL4.innerText = "↩ Coba Lagi";
         result.classList.remove('hide')
-        
         controls.classList.remove("hide");
         startBtn.classList.add("hide");
         lanjutL2.classList.add("hide");
@@ -172,6 +176,24 @@ lanjutL4.addEventListener("click", () => {
         deskripsi.classList.add("hide");
         username.classList.add('hide');
         labelUsername.classList.add('hide');
+    //     lanjutL4.addEventListener('click', () => {
+    //       if(score>69){
+    //         skor.innerHTML=score=45;
+    //       }
+    //       else if(score>44){
+    //         skor.innerHTML=score=25;
+    //       }
+    //       else if(score>34){
+    //         skor.innerHTML=score=15;
+    //     }
+    //       else if(score>24){
+    //           skor.innerHTML=score=10;
+    //       }else if(score>9){
+    //         skor.innerHTML=score=0;
+    //       }else if (score<9){
+    //         skor.innerHTML=score;
+    //       }
+    // });
       };
       
     
