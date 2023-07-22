@@ -10,32 +10,25 @@ lanjutL2.addEventListener("click", () => {
     lanjutL3.classList.add('hide');
     level++;
     tampil();
+
     
     const questionGenerator2 = () => {
       
         btnAns5.classList.remove('hide')
         btnAns6.classList.remove('hide')
 
-            let operators = ["+", "-","*","/"];
+            let operators = ["*","/"];
             let pembagi = ["2","3"];
             let nilaiBagi = ["6","12","18","24","30","42","48","66","54","60","72"]
 
             //menentukan angka anatara 1-20
-            let [num1, num2] = [randomValue(1, 10), randomValue(1, 10)];
+            let [num1, num2] = [randomValue(1, 20), randomValue(1, 10)];
             // let random = randomValue(1,20);
             //menentukan operator random
             let randomOperator = operators[Math.floor(Math.random() * operators.length)];
             let randomPembagi = pembagi[Math.floor(Math.random() * pembagi.length)]
             let randomNilaiBagi = nilaiBagi[Math.floor(Math.random() * nilaiBagi.length)]
-            if(randomOperator == "+" ){
-              [num1, num2] = [randomValue(20, 50), randomValue(20, 50)];
-            }
-            if (randomOperator == "-") {
-              [num1, num2] = [randomValue(20, 100), randomValue(20, 100)];
-              if(num2 > num1){
-                [num1, num2] = [num2, num1];
-                }
-            }
+            
             if (randomOperator == "/") {
               [num1, num2] = [randomNilaiBagi, randomPembagi];
             }
@@ -43,13 +36,7 @@ lanjutL2.addEventListener("click", () => {
             //membuat variabel jawaban 
             let solution = eval(`${num1}${randomOperator}${num2}`);
           
-            if (randomOperator == "-") {
-                answerValue = solution;
-                question.innerHTML = `${num1} - ${num2}  = <input type="number" id="inputValue" placeholder="?"\>`;
-            } else if(randomOperator == "+") {
-                answerValue = solution;
-                question.innerHTML = `${num1} + ${num2}  = <input type="number" id="inputValue" placeholder="?"\>`;
-            } else if(randomOperator == "/") {
+           if(randomOperator == "/") {
                 answerValue = solution;
                 question.innerHTML = `${num1} / ${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
             } else {
@@ -73,11 +60,11 @@ lanjutL2.addEventListener("click", () => {
             let ans6 = document.getElementById("ans6")
             
             ans1 = answerValue;
-            ans2 = randomValue(1,100);
-            ans3 = randomValue(1,100);
-            ans4 = randomValue(1,100);
-            ans5 = randomValue(1,100);
-            ans6 = randomValue(1,100);
+            ans2 = randomValue(1,200);
+            ans3 = randomValue(1,200);
+            ans4 = randomValue(1,200);
+            ans5 = randomValue(1,200);
+            ans6 = randomValue(1,200);
             
             document.getElementById("ans1").innerHTML = ans1;
             document.getElementById("ans2").innerHTML = ans2;
@@ -99,9 +86,9 @@ lanjutL2.addEventListener("click", () => {
                   document.getElementById("kotakan").style.width = "auto";
                   result.style.backgroundColor = "#79ff80";
                   score=score;
-                  score += 15;
+                  score += 10;
                   skor.innerHTML = score;
-                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span><br>Score +15`);
+                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span><br>Score +10`);
                   lanjutL2.classList.add('hide');
 
                   // lanjutL2.addEventListener('click', () => {

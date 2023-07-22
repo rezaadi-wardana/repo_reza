@@ -21,7 +21,7 @@
     width: 100%;
     height: 5rem;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 75% auto auto;
     grid-template-rows: 5rem;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +29,7 @@
     z-index: 9999;
  }
  .nav div img {
+   background-color: #ffb71b;
     width: auto;
     height: 5rem;
     padding: 10px;
@@ -40,6 +41,13 @@
     height: 1rem;
     align-items: center;
     color: rgb(110, 79, 21);
+ }
+ .nav h1 {
+  background-color: #ffb71b;
+  padding-top:  13px  ;
+  padding-bottom: 12px;
+    padding-right: 10px;
+    color:#131333;
  }
  .container-ucapan {
   display: grid;
@@ -113,7 +121,16 @@
     font-weight: 500;
     line-height: 1.8em;
   }
+ 
+@keyframes anidelay {
+  0% {
+    display: auto;
+
+  }100%{
+    display: none;
+  }
   
+}  
   .container #question {
     background-color: #eeedf1;
     font-size: 2em;
@@ -125,6 +142,7 @@
     justify-content: center;
     margin: 1.2em 0 1em 0;
     padding: 1em 0;
+    animation: anidelay 1s 5s;
     border-radius: 5px;
   }
   .container input {
@@ -136,7 +154,7 @@
     padding: 0 0.2em;
     border: none;
     background-color: transparent;
-    border-bottom: 0.12em solid #23234c;
+    /* border-bottom: 0.12em solid #23234c; */
     margin: 0 0.25em;
   }
   .container input:focus {
@@ -151,16 +169,16 @@
   }
   .controls-container {
     transition: 1s ease;
-
-    /* background-image: url(../img/bga.jpg); */
-    background-image: radial-gradient(#ffdb67, rgb(243, 229, 181));
+    /* background-color: #f7e7b5; */
+    background-image: url(../img/kids.jpg);
+    /* background-image: radial-gradient(#ffdb67, rgb(243, 229, 181)); */
     background-size: cover;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #f4c531;
+    /* background-color: #f4c531; */
     height: 100%;
     width: 100%;
     top: 0;
@@ -168,10 +186,12 @@
   .game-box .controls-container h3 {
     font-size: 5rem;
     font-weight: bold;
-    color:#131333
+    color:#131333;
+    animation: animasi 30s infinite;
    }
   
-  #start-btn, #lanjutL2, #lanjutL3, #lanjutL4, #selesai {
+  #start-btn, #lanjutL2, #lanjutL3, #lanjutL4, #lanjutL5, #lanjutL6,
+  #lanjutL7,#lanjutL8,#lanjutL9,#lanjutL10, #selesai {
     font-size: 1.2em;
     font-weight: 500;
     background-color: #f4c531;
@@ -184,7 +204,9 @@
     border-radius: 0.3em;
     z-index: 9999;
   }
-  #start-btn:hover, #lanjutL2:hover, #lanjutL3:hover, #lanjutL4:hover, #selesai :hover {
+  #start-btn:hover, #lanjutL2:hover, #lanjutL3:hover, #lanjutL4:hover,
+  #lanjutL5:hover,#lanjutL6:hover,#lanjutL7:hover,#lanjutL8:hover,
+  #lanjutL9:hover,#lanjutL10:hover,#selesai :hover {
     background-color: #fffbe7;
   }
   #result {
@@ -212,7 +234,6 @@
     background-color: transparent;
     justify-content: center;
     align-items: center;
-
   }
   
   .container #answer button  {
@@ -224,7 +245,7 @@
   align-items: center;
   background-color:#ffae00;
   font-size: 30px;
-  border-radius: 0.2%;
+  border-radius: 10px;
  
   }
   .container #answer #btn-ans1:hover,
@@ -241,13 +262,16 @@
 
 
   .game-box .controls-container p {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 30px;
+    margin-top: -10px;
     color: #bd7b02;
     font-weight: 800;
+    animation: animasi 30s infinite;
    }
    label {
     font-size: 20px;
+    font-weight: bold;
    }
   input {
     height: 33px;
@@ -264,7 +288,7 @@
     width: 30%;
     height: 13em;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
     grid-row-gap: 0px;
@@ -304,9 +328,10 @@
  .footer div a {
   font-size: 1.2em;
     padding: 10px 20px;
+    font-weight: bold;
     /* background-color:#f4c531; */
     text-decoration: none;
-    color: #23234c;
+    color: #131333;
  }
 
 
@@ -335,8 +360,8 @@
     animation: animate 25s linear infinite;
     bottom: -100px;
     /* opacity: 0.2; */
-    color: #ffbb00;
-    font-weight: 700;
+    color:#f7e7b5;
+    font-weight: 800;
     
 }
 
@@ -428,7 +453,7 @@
 
     100%{
         transform: translateY(-1000px) rotate(720deg);
-        opacity: -0.75;
+        opacity: -0.5;
         border-radius: 50%;
     }
 

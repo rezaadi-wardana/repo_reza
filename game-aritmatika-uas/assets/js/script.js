@@ -2,6 +2,12 @@ const startBtn = document.getElementById("start-btn");
 const lanjutL2 = document.getElementById("lanjutL2");
 const lanjutL3 = document.getElementById("lanjutL3");
 const lanjutL4 = document.getElementById("lanjutL4");
+const lanjutL5 = document.getElementById("lanjutL5");
+const lanjutL6 = document.getElementById("lanjutL6");
+const lanjutL7 = document.getElementById("lanjutL7");
+const lanjutL8 = document.getElementById("lanjutL8");
+const lanjutL9 = document.getElementById("lanjutL9");
+const lanjutL10 = document.getElementById("lanjutL10");
 const selesai = document.getElementById("selesai");
 const question = document.getElementById("question");
 const controls = document.querySelector(".controls-container");
@@ -22,6 +28,7 @@ let btnAns4 = document.getElementById("btn-ans4");
 let btnAns5 = document.getElementById("btn-ans5");
 let btnAns6 = document.getElementById("btn-ans6");
 let kotakan = document.getElementById('kotakan');
+const waktu = document.getElementById("waktu");
 
 let answerValue;
 let score=0;
@@ -43,6 +50,12 @@ ucapan2.classList.add('hide');
 lanjutL2.classList.add('hide');
 lanjutL3.classList.add('hide');
 lanjutL4.classList.add('hide');
+lanjutL5.classList.add('hide');
+lanjutL6.classList.add('hide');
+lanjutL7.classList.add('hide');
+lanjutL8.classList.add('hide');
+lanjutL9.classList.add('hide');
+lanjutL10.classList.add('hide');
 selesai.classList.add('hide');
 result.classList.add('hide')
 
@@ -73,6 +86,7 @@ const questionGenerator = () => {
   if (randomOperator == "-") {
     answerValue = solution;
     question.innerHTML = `${num1} - ${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
+
   } else {
     answerValue = solution;
     question.innerHTML = `${num1} + ${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
@@ -100,14 +114,14 @@ const questionGenerator = () => {
   ans4 = randomValue(1,40);
   ans5 = randomValue(1,40);
   ans6 = randomValue(1,40);
-  
+
   document.getElementById("ans1").innerHTML = ans1;
   document.getElementById("ans2").innerHTML = ans2;
   document.getElementById("ans3").innerHTML = ans3;
   document.getElementById("ans4").innerHTML = ans4;
   document.getElementById("ans5").innerHTML = ans5;
   document.getElementById("ans6").innerHTML = ans6;
-
+  
   
   
   const check = () => {
@@ -202,6 +216,7 @@ startBtn.addEventListener("click", () => {
   startBtn.innerText = "↩ Coba Lagi";
   result.classList.remove('hide')
   controls.classList.remove("hide");
+  controls.style.backgroundImage = "url(assets/img/bga.jpg)";
   startBtn.classList.remove("hide");
   judul.classList.add("hide");
   deskripsi.classList.add("hide");

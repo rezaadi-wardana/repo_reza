@@ -11,11 +11,11 @@ lanjutL4.addEventListener("click", () => {
     level = 4;
     tampil();
 
-    [num1, num2] = [null, null];
+    [num1, num2] = [0, 0];
         const questionGenerator4 = () => {
 
 
-            let operators = ["+", "-","*","/"];
+            let operators = ["*","/"];
             let pembagi = ["2","3"];
             let nilaiBagi = ["24","30","42","48","66","54","60","72"];
 
@@ -23,25 +23,6 @@ lanjutL4.addEventListener("click", () => {
             let randomOperator = operators[Math.floor(Math.random() * operators.length)];
             let randomPembagi = pembagi[Math.floor(Math.random() * pembagi.length)]
             let randomNilaiBagi = nilaiBagi[Math.floor(Math.random() * nilaiBagi.length)]
-
-            if(randomOperator == "+" ){
-              [num1, num2] = [randomNilaiBagi, randomValue(20, 50)];
-              
-              let solution = eval(`${num1} + ${num2} - ${num1/2}`);
-              answerValue = solution;
-              question.innerHTML = `${num1} + ${num2} - ${num1/2} = <input type="number" id="inputValue" placeholder="?"\>`;
-            } else
-            if (randomOperator == "-") {
-              [num1, num2] = [randomNilaiBagi, randomValue(20, 100)];
-              if(num2 > num1){
-                [num1, num2] = [num2, num1];
-                }
-              
-              let solution = eval(`${num1} - ${num2} + ${num1/2}`);
-              answerValue = solution;
-              question.innerHTML = `${num1} - ${num2} + ${num1/2} = <input type="number" id="inputValue" placeholder="?"\>`;
-              
-            } else
             if (randomOperator == "/") {
               [num1, num2] = [randomNilaiBagi, randomPembagi];
 
@@ -73,11 +54,11 @@ lanjutL4.addEventListener("click", () => {
             let ans6 = document.getElementById("ans6")
             
             ans1 = answerValue;
-            ans2 = randomValue(1,100);
-            ans3 = randomValue(1,100);
-            ans4 = randomValue(1,100);
-            ans5 = randomValue(1,100);
-            ans6 = randomValue(1,100);
+            ans2 = randomValue(1,200);
+            ans3 = randomValue(1,200);
+            ans4 = randomValue(1,200);
+            ans5 = randomValue(1,200);
+            ans6 = randomValue(1,200);
             
             document.getElementById("ans1").innerHTML = ans1;
             document.getElementById("ans2").innerHTML = ans2;
@@ -93,15 +74,16 @@ lanjutL4.addEventListener("click", () => {
               if (userInput) {
               if (userInput == answerValue) {
                 let username = document.getElementById('username').value;
-                selesai.classList.remove('hide');
+                lanjutL5.classList.remove('hide');
+                lanjutL3.classList.add('hide');
                 document.getElementById("kotakan").style.backgroundColor = "transparent";
                 document.getElementById("kotakan").style.display = "inline-flex";
                 document.getElementById("kotakan").style.width = "auto";
                   result.style.backgroundColor = "#79ff80";
                   score =score;
-                  score += 25;
+                  score += 10;
                   skor.innerHTML = score;
-                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span> <br><br>\tPERMAINAN SELESAI<BR>\tTotal Skor Anda : ${score}`);
+                  stopGame(`Yeayy !! Jawaban ${username} <span>Benar</span><br>Score +10`);
                   lanjutL4.classList.add('hide');
                 
 
@@ -110,13 +92,13 @@ lanjutL4.addEventListener("click", () => {
                 else if(userInput !== answerValue) {
                   document.getElementById("kotakan").style.backgroundColor = "transparent";
                   result.style.backgroundColor = "#ff9a9a";
-                  selesai.classList.remove('hide');
+                  lanjutL5.classList.remove('hide');
                   document.getElementById("kotakan").style.backgroundColor = "transparent";
                 document.getElementById("kotakan").style.display = "inline-flex";
                 document.getElementById("kotakan").style.width = "auto";
                   score=score;
                   let username = document.getElementById('username').value;
-                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span><br><br>\tPERMAINAN SELESAI<BR>\tTotal Skor Anda : ${score}`);
+                  stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
                   // return score;
 
               }
@@ -176,24 +158,6 @@ lanjutL4.addEventListener("click", () => {
         deskripsi.classList.add("hide");
         username.classList.add('hide');
         labelUsername.classList.add('hide');
-    //     lanjutL4.addEventListener('click', () => {
-    //       if(score>69){
-    //         skor.innerHTML=score=45;
-    //       }
-    //       else if(score>44){
-    //         skor.innerHTML=score=25;
-    //       }
-    //       else if(score>34){
-    //         skor.innerHTML=score=15;
-    //     }
-    //       else if(score>24){
-    //           skor.innerHTML=score=10;
-    //       }else if(score>9){
-    //         skor.innerHTML=score=0;
-    //       }else if (score<9){
-    //         skor.innerHTML=score;
-    //       }
-    // });
       };
       
     
