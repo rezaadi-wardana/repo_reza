@@ -115,7 +115,6 @@ lanjutL10.addEventListener("click", () => {
                   setTimeout(function() {
                     stopGame(`PERMAINAN SELESAI<BR>\tTotal Skor Anda : ${score}`);
                   result.style.backgroundColor = "orange";
-
                   selesai.classList.remove('hide');
                   }, 3000);
               }
@@ -129,13 +128,14 @@ lanjutL10.addEventListener("click", () => {
                 document.getElementById("kotakan").style.display = "inline-flex";
                 document.getElementById("kotakan").style.width = "auto";
                 score=score;
+                lanjutL10.classList.add('hide');
                   stopGame(`Ohh Tidak !! Jawaban ${username} <span> Salah</span>`);
                   
                   setTimeout(function() {
                     stopGame(`PERMAINAN SELESAI<BR>\tTotal Skor Anda : ${score}`);
                   result.style.backgroundColor = "orange";
                   selesai.classList.remove('hide');
-                    lanjutL10.classList.add('hide');
+                lanjutL10.classList.remove('hide');
                   }, 3000);
               }
               }
@@ -184,7 +184,7 @@ lanjutL10.addEventListener("click", () => {
 
     let stopGame = (resultText) => {
       result.innerHTML = resultText;
-      lanjutL10.innerText = "↩ Coba Lagi";
+      lanjutL10.innerText = "↩ Coba Level 10 Lagi";
       result.classList.remove('hide')
       controls.classList.remove("hide");
       startBtn.classList.add("hide");

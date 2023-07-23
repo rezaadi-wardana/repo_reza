@@ -173,6 +173,7 @@
     background-image: url(../img/kids.jpg);
     /* background-image: radial-gradient(#ffdb67, rgb(243, 229, 181)); */
     background-size: cover;
+    background-position: -50px;
     position: absolute;
     display: flex;
     align-items: center;

@@ -216,7 +216,9 @@ startBtn.addEventListener("click", () => {
   startBtn.innerText = "↩ Coba Lagi";
   result.classList.remove('hide')
   controls.classList.remove("hide");
-  controls.style.backgroundImage = "url(assets/img/bga.jpg)";
+  controls.style.backgroundImage = "url(assets/img/bgk.jpg)";
+  controls.style.backgroundPosition = "top";
+  document.getElementById('circles').classList.add('hide');
   startBtn.classList.remove("hide");
   judul.classList.add("hide");
   deskripsi.classList.add("hide");
